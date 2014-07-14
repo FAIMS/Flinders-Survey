@@ -75,13 +75,18 @@
             <Survey_Unit>
               <Survey_Unit_ID/>
               <Timestamp/>
+              <Device_ID/>
               <Total_Transect_Width/>
               <Number_of_Walkers/>
               <Participants/>
-              <Landscape_Element/>
-              <Vegetation_Structure/>
+              <Landform_Pattern/>
+              <Landform_Notes/>
+              <Vegetation_Structure_Upper/>
+              <Vegetation_Structure_Mid_stratum/>
+              <Vegetation_Structure_Ground_stratum/>
+              <Vegetation_Notes/>
               <Ground_Surface_Visibility/>
-              <Notes/>
+              <Ground_Surface_Notes/>
               <Photos/>
               <Attach_Photo/>
               <Update/>
@@ -114,7 +119,9 @@
       </instance>
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Total_Transect_Width" type="decimal"/>
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Number_of_Walkers" type="decimal"/>
-      <bind nodeset="/faims/Survey_Unit/Survey_Unit/Notes" type="string"/>
+      <bind nodeset="/faims/Survey_Unit/Survey_Unit/Landform_Notes" type="string"/>
+      <bind nodeset="/faims/Survey_Unit/Survey_Unit/Vegetation_Notes" type="string"/>
+      <bind nodeset="/faims/Survey_Unit/Survey_Unit/Ground_Surface_Notes" type="string"/>
       <bind nodeset="/faims/POI/POI/Notes" type="string"/>
       <bind nodeset="/faims/control/Search/Walker" type="decimal"/>
     </model>
@@ -293,6 +300,13 @@
         <input ref="Timestamp" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="true">
           <label>{Timestamp}</label>
         </input>
+        <select1 appearance="full" ref="Device_ID" faims_attribute_name="Device ID" faims_attribute_type="vocab" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+          <label>{Device_ID}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
         <input ref="Total_Transect_Width" faims_attribute_name="Total Transect Width (m)" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Total_Transect_Width}</label>
         </input>
@@ -302,29 +316,49 @@
         <input ref="Participants" faims_attribute_name="Participants" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Participants}</label>
         </input>
-        <select1 ref="Landscape_Element" faims_attribute_name="Landscape Element" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
-          <label>{Landscape_Element}</label>
+        <select1 ref="Landform_Pattern" faims_attribute_name="Landform pattern" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Landform_Pattern}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="Vegetation_Structure" faims_attribute_name="Vegetation Structure" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
-          <label>{Vegetation_Structure}</label>
+        <input ref="Landform_Notes" faims_attribute_name="Landform Notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+          <label>{Landform_Notes}</label>
+        </input>
+        <select1 ref="Vegetation_Structure_Upper" faims_attribute_name="Vegetation Structure–Upper" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Vegetation_Structure_Upper}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="Ground_Surface_Visibility" faims_attribute_name="Ground Surface Visibility" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+        <select1 ref="Vegetation_Structure_Mid_stratum" faims_attribute_name="Vegetation Structure–Mid-stratum" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Vegetation_Structure_Mid_stratum}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <select1 ref="Vegetation_Structure_Ground_stratum" faims_attribute_name="Vegetation Structure–Ground stratum" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Vegetation_Structure_Ground_stratum}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <input ref="Vegetation_Notes" faims_attribute_name="Vegetation notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+          <label>{Vegetation_Notes}</label>
+        </input>
+        <select1 ref="Ground_Surface_Visibility" faims_attribute_name="Ground surface visibility" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Ground_Surface_Visibility}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <input ref="Notes" faims_attribute_name="Notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
-          <label>{Notes}</label>
+        <input ref="Ground_Surface_Notes" faims_attribute_name="Ground surface notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+          <label>{Ground_Surface_Notes}</label>
         </input>
         <select type="camera" faims_sync="true" ref="Photos" faims_attribute_name="Photo" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
           <label>{Photos}</label>

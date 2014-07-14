@@ -20,7 +20,7 @@
         <term> {Landscape}
           <description>Description TBD</description>
         </term>
-        <term> {Other}
+        <term> {zOther}
           <description>Description TBD</description>
         </term>
       </lookup>
@@ -93,81 +93,480 @@
     <property name="Survey Unit ID" type="freetext" isIdentifier="true">
       <description>The current autonumbering assumes single device in field. If multiple devices are in use, uniqueness rules must be defined.</description>
     </property>
+    <property name="Device ID" type="enum">
+      <description>Description TBD</description>
+      <lookup>
+        <term> {A}
+          <description>Description TBD</description>
+        </term>
+        <term> {B}
+          <description>Description TBD</description>
+        </term>
+        <term> {C}
+          <description>Description TBD</description>
+        </term>
+        <term> {D}
+          <description>Description TBD</description>
+        </term>
+      </lookup>
+    </property>
     <property name="Total Transect Width (m)" type="float">
       <description>Description TBD</description>
     </property>
     <property name="Number of Walkers" type="float">
       <description>Description TBD</description>
     </property>
-    <property name="Participants" type="float">
+    <property name="Participants" type="freetext">
       <description>Description TBD</description>
     </property>
-    <property name="Landscape Element" type="enum">
-      <description>Description TBD</description>
+    <property name="Landform pattern" type="enum">
+      <description>A combination of relief, slope, stream channel occurance and mode of geomorphological activity within the of the survey unit. What landform pattern comprises the majority (>50%) of the survey unit? Minimum size of a landform pattern is circle 300 m in diameter circle with you at the centre. If a landform pattern that is greater in size is encountered, create a new survey unit.</description>
       <lookup>
-        <term> {aValley}
-          <description>Description TBD</description>
+        <term>{0No_Observation}
+          <description/>
         </term>
-        <term> {bHillside}
-          <description>Description TBD</description>
+        <term> {ALP}
+          <description/>
         </term>
-        <term> {cRidgeline}
-          <description>Description TBD</description>
+        <term> {ANA}
+          <description/>
         </term>
-        <term> {dPlateau}
-          <description>Description TBD</description>
+        <term> {BAD}
+          <description/>
+        </term>
+        <term> {BAR}
+          <description/>
+        </term>
+        <term> {BEA}
+          <description/>
+        </term>
+        <term> {CAL}
+          <description/>
+        </term>
+        <term> {CHE}
+          <description/>
+        </term>
+        <term> {COR}
+          <description/>
+        </term>
+        <term> {COV}
+          <description/>
+        </term>
+        <term> {DEL}
+          <description/>
+        </term>
+        <term> {DUN}
+          <description/>
+        </term>
+        <term> {ESC}
+          <description/>
+        </term>
+        <term> {FLO}
+          <description/>
+        </term>
+        <term> {HIL}
+          <description/>
+        </term>
+        <term> {KAR}
+          <description/>
+        </term>
+        <term> {LAC}
+          <description/>
+        </term>
+        <term> {LAV}
+          <description/>
+        </term>
+        <term> {LON}
+          <description/>
+        </term>
+        <term> {LOW}
+          <description/>
+        </term>
+        <term> {MAD}
+          <description/>
+        </term>
+        <term> {MAR}
+          <description/>
+        </term>
+        <term> {MEA}
+          <description/>
+        </term>
+        <term> {MET}
+          <description/>
+        </term>
+        <term> {MOU}
+          <description/>
+        </term>
+        <term> {PAR}
+          <description/>
+        </term>
+        <term> {PED}
+          <description/>
+        </term>
+        <term> {PEP}
+          <description/>
+        </term>
+        <term> {PNP}
+          <description/>
+        </term>
+        <term> {PLA}
+          <description/>
+        </term>
+        <term> {PLT}
+          <description/>
+        </term>
+        <term> {PLY}
+          <description/>
+        </term>
+        <term> {RIS}
+          <description/>
+        </term>
+        <term> {SAN}
+          <description/>
+        </term>
+        <term> {SHF}
+          <description/>
+        </term>
+        <term> {STA}
+          <description/>
+        </term>
+        <term> {TER}
+          <description/>
+        </term>
+        <term> {TEL}
+          <description/>
+        </term>
+        <term> {TID}
+          <description/>
+        </term>
+        <term> {VOL}
+          <description/>
         </term>
       </lookup>
     </property>
-    <property name="Vegetation Structure" type="enum">
-      <description>Description TBD</description>
+    <property name="Landform notes" type="freetext">
+      <description>Optional. Provide any additional descriptive notes if required.</description>
+    </property>
+    <property name="Vegetation Structure–Upper" type="enum">
+      <description>Categories based on the growth form, height and cover within the survey unit. Describe the vegetation structure for the dominant or tallest stratum, if present. What is the vegetation structure that comprises the majority (>50%) of the survey unit?</description>
       <lookup>
-        <term> {aOpen_Forest}
+        <term>{0No_Observation}
+          <description/>
+        </term>
+        <term> {a1.0}
+          <description>Description TBD</description>
+          <term> {a2.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {a3.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {a4.0}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {b1.0}
           <description>Description TBD</description>
         </term>
-        <term> {bClosed_Forest}
+        <term> {c1.0}
           <description>Description TBD</description>
         </term>
-        <term> {cScrub}
+        <term> {f1.0}
           <description>Description TBD</description>
         </term>
-        <term> {dGrassland}
+        <term> {g1.0}
+          <description>Description TBD</description>
+          <term> {g2.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g3.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g4.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g5.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g6.0}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {h1.0}
+          <description>Description TBD</description>
+          <term> {h2.0}
+            <description>Description TBD</description>
+            <term> {h2.1}
+              <description>Description TBD</description>
+            </term>
+          </term>
+        </term>
+        <term> {l1.0}
           <description>Description TBD</description>
         </term>
-        <term> {eSwamp}
+        <term> {m1.0}
           <description>Description TBD</description>
+        </term>
+        <term> {v1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {w1.0}
+          <description>Description TBD</description>
+          <term> {w1.1}
+            <description>Description TBD</description>
+          </term>
+          <term> {w1.2}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {w2.0}
+          <description>Description TBD</description>
+          <term> {w2.1}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {w3.0}
+          <description>Description TBD</description>
+          <term> {w3.1}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.2}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.3}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.4}
+            <description>Description TBD</description>
+          </term>
         </term>
       </lookup>
     </property>
-    <property name="Ground Surface Visibility" type="enum">
-      <description>Description TBD</description>
+    <property name="Vegetation Structure–Mid-stratum" type="enum">
+      <description>Describe the vegetation structure for the mid-stratum, if present. What is the vegetation structure that comprises the majority (>50%) of the survey unit?</description>
       <lookup>
-        <term> {aNone}
+        <term>{0No_Observation}
+          <description/>
+        </term>
+        <term> {a1.0}
+          <description>Description TBD</description>
+          <term> {a2.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {a3.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {a4.0}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {b1.0}
           <description>Description TBD</description>
         </term>
-        <term> {bLow}
+        <term> {c1.0}
           <description>Description TBD</description>
         </term>
-        <term> {cGood}
+        <term> {f1.0}
           <description>Description TBD</description>
         </term>
-        <term> {dExcellent}
+        <term> {g1.0}
           <description>Description TBD</description>
+          <term> {g2.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g3.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g4.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g5.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g6.0}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {h1.0}
+          <description>Description TBD</description>
+          <term> {h2.0}
+            <description>Description TBD</description>
+            <term> {h2.1}
+              <description>Description TBD</description>
+            </term>
+          </term>
+        </term>
+        <term> {l1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {m1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {v1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {w1.0}
+          <description>Description TBD</description>
+          <term> {w1.1}
+            <description>Description TBD</description>
+          </term>
+          <term> {w1.2}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {w2.0}
+          <description>Description TBD</description>
+          <term> {w2.1}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {w3.0}
+          <description>Description TBD</description>
+          <term> {w3.1}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.2}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.3}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.4}
+            <description>Description TBD</description>
+          </term>
         </term>
       </lookup>
     </property>
-    <property name="Notes" type="freetext">
-      <description>Description TBD</description>
+    <property name="Vegetation Structure–Ground stratum" type="enum">
+      <description>Describe the vegetation structure for the ground-stratum, if present. What is the vegetation structure that comprises the majority (greater than 50%) of the survey unit? Usually less than 2.0 m in height.</description>
+      <lookup>
+        <term>{0No_Observation}
+          <description/>
+        </term>
+        <term> {a1.0}
+          <description>Description TBD</description>
+          <term> {a2.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {a3.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {a4.0}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {b1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {c1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {f1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {g1.0}
+          <description>Description TBD</description>
+          <term> {g2.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g3.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g4.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g5.0}
+            <description>Description TBD</description>
+          </term>
+          <term> {g6.0}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {h1.0}
+          <description>Description TBD</description>
+          <term> {h2.0}
+            <description>Description TBD</description>
+            <term> {h2.1}
+              <description>Description TBD</description>
+            </term>
+          </term>
+        </term>
+        <term> {l1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {m1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {v1.0}
+          <description>Description TBD</description>
+        </term>
+        <term> {w1.0}
+          <description>Description TBD</description>
+          <term> {w1.1}
+            <description>Description TBD</description>
+          </term>
+          <term> {w1.2}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {w2.0}
+          <description>Description TBD</description>
+          <term> {w2.1}
+            <description>Description TBD</description>
+          </term>
+        </term>
+        <term> {w3.0}
+          <description>Description TBD</description>
+          <term> {w3.1}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.2}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.3}
+            <description>Description TBD</description>
+          </term>
+          <term> {w3.4}
+            <description>Description TBD</description>
+          </term>
+        </term>
+      </lookup>
+    </property>
+    <property name="Vegetation notes" type="freetext">
+      <description>Note any recognisable species that are particularly dominant, known classifications for the ecosystem or other pertinent information</description>
+    </property>
+    <property name="Ground surface visibility" type="enum">
+      <description/>
+      <lookup>
+        <term>{0No_Observation}
+          <description/>
+        </term>
+        <term> {Heavy}
+          <description>Greater than 70%</description>
+        </term>
+        <term> {Mid_dense}
+          <description>30–70% cover</description>
+        </term>
+        <term> {Sparse}
+          <description>10–30% cover</description>
+        </term>
+        <term> {Very_sparse}
+          <description>Less than 10%</description>
+        </term>
+      </lookup>
+    </property>
+    <property name="Ground surface notes" type="freetext">
+      <description>Describe any factors or issues affecting ground cover</description>
     </property>
     <property name="Photo" type="file">
-      <description>Description TBD</description>
+      <description>Take a photo that best represents the survey unit.</description>
     </property>
     <property name="Team" type="file">
       <description>Description TBD</description>
       <lookup>
-       <term>A<description/></term>
-       <term>B<description/></term>
-       <term>C<description/></term>
+       <term>{A}<description/></term>
+       <term>{B}<description/></term>
+       <term>{C}<description/></term>
       </lookup>
     </property>
   </ArchaeologicalElement>

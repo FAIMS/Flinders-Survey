@@ -219,10 +219,6 @@ newSurveyUnit(){
     autoNumSurveyUnit();
     transectEnabled = true;
     saveSurveyUnit("saveGPSTrack();");
-    
-
-
-
 
 }
 
@@ -269,9 +265,12 @@ reallyDeleteSurveyUnit() {
 }
 
 loadSurveyUnitAttributes() {
-    populateDropDown("Survey_Unit/Survey_Unit/Landscape_Element", makeVocab("Landscape Element"));
-    populateDropDown("Survey_Unit/Survey_Unit/Vegetation_Structure", makeVocab("Vegetation Structure"));
-    populateDropDown("Survey_Unit/Survey_Unit/Ground_Surface_Visibility", makeVocab("Ground Surface Visibility"));
+    populateRadioGroup("Survey_Unit/Survey_Unit/Device_ID", makeVocab("Device ID"));
+    populateDropDown("Survey_Unit/Survey_Unit/Landform_Pattern", makeVocab("Landform pattern"));
+    populateHierarchicalDropDown("Survey_Unit/Survey_Unit/Vegetation_Structure_Upper", "Vegetation Structure–Upper");
+    populateHierarchicalDropDown("Survey_Unit/Survey_Unit/Vegetation_Structure_Mid_stratum", "Vegetation Structure–Mid-stratum");
+    populateHierarchicalDropDown("Survey_Unit/Survey_Unit/Vegetation_Structure_Ground_stratum", "Vegetation Structure–Ground stratum");
+    populateDropDown("Survey_Unit/Survey_Unit/Ground_Surface_Visibility", makeVocab("Ground surface visibility"));
 }
 
 
@@ -464,7 +463,7 @@ initMap() {
     showDatabaseLayer("control/Map/map", "Saved Data Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
 }
 
-initMap();
+// initMap();
 
 
 /*** TRACKLOG ***/
