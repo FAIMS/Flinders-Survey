@@ -145,7 +145,7 @@ saveGPSTrack() {
     
     List attributes = createAttributeList();
     
-    attributes.add(createEntityAttribute("Longitude", null, null, "" + position.getLongitude(), null));
+    attributes.add(createEntityAttribute("Longitude", null, null, "" + positionmap.getLongitude(), null));
     attributes.add(createEntityAttribute("Latitude", null, null, "" + position.getLatitude(), null ));
     attributes.add(createEntityAttribute("Heading", null, null, "" + getGPSHeading(), null));
     attributes.add(createEntityAttribute("Accuracy", null, null, "" + getGPSEstimatedAccuracy(), null));
@@ -216,6 +216,8 @@ newSurveyUnit(){
     setFieldValue("Survey_Unit/Survey_Unit/Timestamp", datetime.get(0));
     setFieldValue("Survey_Unit/Survey_Unit/Participants", getFieldValue("control/Search/TeamMember"));
     setFieldValue("Survey_Unit/Survey_Unit/Number_of_Walkers", getFieldValue("control/Search/Walker"));
+    Object localTeam = fetchOne("select value from localSettings where key = 'Team';").get(0);
+    setFieldValue("Survey_Unit/hidden/Device_ID", localTeam);    
     autoNumSurveyUnit();
     transectEnabled = true;
     saveSurveyUnit("saveGPSTrack();");
@@ -265,7 +267,7 @@ reallyDeleteSurveyUnit() {
 }
 
 loadSurveyUnitAttributes() {
-    populateRadioGroup("Survey_Unit/Survey_Unit/Device_ID", makeVocab("Device ID"));
+    populateRadioGroup("Survey_Unit/hidden/Device_ID", makeVocab("Device ID"));
     populateDropDown("Survey_Unit/Survey_Unit/Landform_Pattern", makeVocab("Landform pattern"));
     populateHierarchicalDropDown("Survey_Unit/Survey_Unit/Vegetation_Structure_Upper", "Vegetation Structure–Upper");
     populateHierarchicalDropDown("Survey_Unit/Survey_Unit/Vegetation_Structure_Mid_stratum", "Vegetation Structure–Mid-stratum");
@@ -411,7 +413,7 @@ DATA_ENTRY_LAYER = "Transect Layer";
 DATA_ENTRY_LAYER_ID = 0;
 
 onEvent("control/Map", "show", "drawTransects()");
-
+onEvent("control/Map/centre", "click", "centerOnCurrentPosition(\"control/Map/map\");"); 
 
 
 drawTransects(){
@@ -510,7 +512,7 @@ getDefaultUsersList() {
 
 populateListForUsers(){
     populateDropDown("user/usertab/users", getDefaultUsersList());
-    populateRadioGroup("user/usertab/Team", makeVocab("Team"));
+    populateRadioGroup("user/usertab/Team", makeVocab("Device ID"));
 
     Object localTeam = fetchOne("select value from localSettings where key = 'Team';");
     Object localUser = fetchOne("select value from localSettings where key = 'User';");

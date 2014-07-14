@@ -93,7 +93,7 @@
     <property name="Survey Unit ID" type="freetext" isIdentifier="true">
       <description>The current autonumbering assumes single device in field. If multiple devices are in use, uniqueness rules must be defined.</description>
     </property>
-    <property name="Device ID" type="enum">
+    <property name="Device ID" type="enum" isIdentifier="true">
       <description>Description TBD</description>
       <lookup>
         <term> {A}
@@ -560,14 +560,6 @@
     </property>
     <property name="Photo" type="file">
       <description>Take a photo that best represents the survey unit.</description>
-    </property>
-    <property name="Team" type="file">
-      <description>Description TBD</description>
-      <lookup>
-       <term>{A}<description/></term>
-       <term>{B}<description/></term>
-       <term>{C}<description/></term>
-      </lookup>
     </property>
   </ArchaeologicalElement>
 </dataSchema>
