@@ -145,7 +145,7 @@ saveGPSTrack() {
     
     List attributes = createAttributeList();
     
-    attributes.add(createEntityAttribute("Longitude", null, null, "" + positionmap.getLongitude(), null));
+    attributes.add(createEntityAttribute("Longitude", null, null, "" + position.getLongitude(), null));
     attributes.add(createEntityAttribute("Latitude", null, null, "" + position.getLatitude(), null ));
     attributes.add(createEntityAttribute("Heading", null, null, "" + getGPSHeading(), null));
     attributes.add(createEntityAttribute("Accuracy", null, null, "" + getGPSEstimatedAccuracy(), null));
