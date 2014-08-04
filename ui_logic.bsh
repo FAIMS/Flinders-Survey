@@ -197,15 +197,25 @@ onEvent("Survey_Unit/Survey_Unit/Finish_SUI", "delayclick", "finishSurveyUnit()"
 onEvent("Survey_Unit/Survey_Unit/Attach_Photo", "click", "attachPictureTo(\"Survey_Unit/Survey_Unit/Photos\")");
 
 String survey_unit_id = null;
-finishSurveyUnit(){
 
+finishSurveyUnit(){
+    position = getGPSPosition();
+    if (position == null) {
+        showWarning("Warning", "You have lost your GPS signal, please wait until the GPS icon is blue before you finish you Survey Unit.");
+        return;
+    }
     saveSurveyUnit("stateAppend=\"End\";saveGPSTrack();transectEnabled=false;cancelTabGroup(\"Survey_Unit\", false);");
 }
-newSurveyUnit(){
 
+newSurveyUnit(){
     if (transectEnabled) {
         showWarning("Already tracking!", "You are already in a Survey Unit! Loading it now.");
         loadSurveyUnitFrom(survey_unit_id);
+        return;
+    }
+    position = getGPSPosition();
+    if (position == null) {
+        showWarning("Warning", "Your GPS is not initialized, you cannot create a Survey Unit until the GPS icon is blue.");
         return;
     }
     survey_unit_id = null;
@@ -431,7 +441,7 @@ initMap() {
 
     DATA_ENTRY_LAYER_ID = createCanvasLayer("control/Map/map", DATA_ENTRY_LAYER);
 
-    showBaseMap("control/Map/map", "Base Layer", "files/data/maps/BM1.tif");
+    showBaseMap("control/Map/map", "Base Layer", "files/data/maps/RasterData.tif");
 
     isEntity = true;
     queryName = "Transects";
@@ -465,7 +475,7 @@ initMap() {
     showDatabaseLayer("control/Map/map", "Saved Data Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
 }
 
-// initMap();
+initMap();
 
 
 /*** TRACKLOG ***/
