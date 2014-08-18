@@ -125,122 +125,397 @@
         <term>{0No_Observation}
           <description/>
         </term>
-        <term> {ALP}
+        <term> {aAlluvium_and_floodplains}
+          <description/>
+          <term> {ALF}
+            <description>Level (less than 1% slope) to very gently inclined, complex landform pattern of extremely low relief. The rapidly migrating alluvial stream channels are shallow to moderately deep, locally numerous, but elsewhere widely spaced. The channels form a centrifugal to divergent, integrated, reticulated to distributary pattern. The landform pattern includes areas that are bar plains, being aggraded or eroded by frequently active channelled stream flow, and other areas comprising terraces or stagnant alluvial plains with slopes that are greater than usual, formed by channelled stream flow but now relict. Incision in the upslope area may give rise to an erosional stream bed between scarps. Typical elements: stream bed, bar, plain. Compare with Sheet-flood fan and Pediment</description>
+          </term>
+          <term> {ALP}
+            <description>Level landform pattern with extremely low relief. The shallow to deep alluvial stream channels are sparse to widely spaced, forming a unidirectional, integrated network. There may be frequently active erosion and aggradation by channelled and overbank stream flow, or the landforms may be relict from these processes. Typical elements: stream channel (stream bed and bank), plain (dominant). Common elements: bar, scroll, levee, backplain, swamp. Occasional elements: ox-bow, flood-out, lake. Included types of landform pattern are: flood plain, bar plain, meander plain, covered plain, anastomotic plain, delta, stagnant alluvial plain, terrace, terraced land.</description>
+          </term>
+          <term> {ANA}
+            <description>Flood plain with slowly migrating, deep alluvial channels, usually moderately spaced, forming a divergent to unidirectional, integrated reticulated network. There is frequently active aggradation by overbank and channelled stream flow. Typical elements: stream channel (stream bed and bank), levee, backplain (dominant). Common element: swamp. Compare with other types under Alluvial plain and Flood plain.</description>
+          </term>
+          <term> {BAR}
+            <description>Flood plain with numerous rapidly migrating, shallow alluvial channels forming a unidirectional, integrated reticulated network. There is frequently active aggradation and erosion by channelled stream flow. Typical elements: stream bed, bar (dominant). Compare with other types under Alluvial plain and Flood plain.</description>
+          </term>
+          <term> {COV}
+            <description>Flood plain with slowly migrating, deep alluvial channels, usually widely spaced and forming a unidirectional, integrated non-tributary network. There is frequently active aggradation by overbank stream flow. Typical elements: stream channel (stream bed and bank), levee, backplain (dominant). Common element: swamp. Compare with other types under Alluvial plain and Flood plain.</description>
+          </term>
+          <term> {DEL}
+            <description>Flood plain projecting into a sea or lake, with slowly migrating, deep alluvial channels, usually moderately spaced, typically forming a divergent, integrated distributary network. This landform is aggraded by frequently active overbank and channelled stream flow that is modified by tides. Typical elements: stream channel (stream bed and bank), levee, backplain (co-dominant), swamp (co-·dominant), lagoon (co-dominant). Common elements: beach ridge, swale, beach, estuary, tidal creek. Compare with other types under Alluvial plain, Flood plain and Chenier plain.</description>
+          </term>
+          <term> {FLO}
+            <description>Alluvial plain characterised by frequently active erosion and aggradation by channelled or overbank stream flow. Unless otherwise specified, 'frequently active' is to mean that flow has an Average Recurrence Interval of 50 years or less. Typical elements: stream channel (stream bed and bank), plain (dominant). Common elements: bar, scroll, levee, backplain, swamp. Occasional elements: ox-bow, flood-out, scroll. Included types of landform pattern are: bar plain, meander plain, covered plain, anastomotic plain. Related relict landform patterns are: stagnant alluvial plain, terrace, terraced land (partly relict).</description>
+          </term>
+          <term> {SAN}
+            <description>Level to gently undulating landform pattern of extremely low relief and without channels; formed possibly by sheet flow or stream flow, but now relict and modified by wind action. Typical element: plain. Occasional elements: dune, playa, lunette.</description>
+          </term>
+          <term> {SHF}
+            <description>Level (less than 1% slope) to very gently inclined landform pattern of extremely low relief with numerous rapidly migrating, very shallow incipient stream channels forming a divergent to unidirectional, integrated or interrupted reticulated pattern. The pattern is aggraded by frequently active sheet flow and channelled stream flow, with subordinate wind erosion. Typical elements: plain, stream bed. Compare with Alluvial fan and Pediment.</description>
+          </term>
+          <term> {STA}
+            <description>Alluvial plain on which erosion and aggradation by channelled and overbank stream flow is barely active or inactive because of reduced water supply, without apparent incision or channel enlargement that would lower the level of stream action. Typical elements: stream channel (stream bed and bank), plain (dominant). Common elements: bar, scroll, levee, backplain, swamp. Occasional elements: ox-bow, flood-out, lake. Compare with Flood plain and Terrace.</description>
+          </term>
+          <term> {TER}
+            <description>Former flood plain on which erosion and aggradation by channelled and overbank stream flow is barely active or inactive because deepening or enlargement of the stream channel has lowered the level of flooding. A pattern that has both a former flood plain and a significant, active flood plain, or that has former flood plains at more than one level, becomes terraced land. Typical elements: terrace plain (dominant), scarp, channel bench. Occasional elements: stream channel, scroll, levee.</description>
+          </term>
+          <term> {TEL}
+            <description>Landform pattern including one or more terraces and often a flood plain. Relief is low or very low (9-90 m). Terrace plains or terrace flats occur at stated heights above the top of the stream bank. Typical elements: terrace plains, terrace flats, scarps, scroll plain, stream channel. Occasional elements: stream channel, scroll, levee.</description>
+          </term>
+        </term>
+        <term> {bRises_and_hills}
+          <description/>
+          <term> {BAD}
+            <description>Landform pattern of low to extremely low relief (less than 90 m) and steep to precipitous slopes, typically with numerous fixed, erosional stream channels which form a non-directional, integrated tributary network. There is continuously active erosion by collapse, landslide, sheet flow, creep and channelled stream flow. Typical elements: ridge (dominant), stream bed or gully. Occasional elements: summit surface, hillcrest, hillslope, talus. Compare with Mountains, Hills, Low hills, Rises and Plain</description>
+          </term>
+          <term> {ESC}
+            <description>Steep to precipitous landform pattern forming a linearly extensive, straight or sinuous, inclined surface, which separates terrains at different altitudes; a plateau is commonly above the escarpment. Relief within the landform pattern may be high (hilly) or low (planar). The upper margin is often marked by an included cliff or scarp. Typical elements: hillcrest, hillslope, cliff­ footslope. Common elements: cliff, scarp, scarp-footslope, talus, footslope, alcove. Occasional element: stream bed.</description>
+          </term>
+          <term> {HIL}
+            <description>Landform pattern of high relief (90-300 m) with gently inclined to precipitous slopes. Fixed, shallow, erosional stream channels, closely to very widely spaced, form a non-directional or convergent, integrated tributary network. There is continuously active erosion by wash and creep and, in some cases, rarely active erosion by landslides. Typical elements: hillcrest, hillslope (dominant), drainage depression, stream bed. Common elements: footslope, alcove, valley flat, gully. Occasional elements: tor, summit surface, scarp, landslide, talus, bench, terrace, doline. Compare with Mountains, Low hills, Rises and Plain.</description>
+          </term>
+          <term> {KAR}
+            <description>Landform pattern of unspecified relief  and slope (for specification use the terms in Table 5, e.g. 'Karst rolling hills') typically with fixed, deep, erosional stream channels forming a non-directional, disintegrated tributary pattern and many closed depressions without stream channels. It is eroded by continuously active solution and rarely active collapse, the products being removed through underground channels. Typical elements: hillcrest, hillslope (dominant), doline. Common elements: summit surface, valley flat, plain, alcove, drainage depression, stream channel, scarp, footslope, landslide. Occasional element: talus.</description>
+          </term>
+          <term> {LOW}
+            <description>Landform pattern of low relief  (30-90 m) and gentle to very steep slopes, typically with fixed, erosional stream channels, closely to very widely spaced, which form a non-directional or convergent, integrated tributary pattern. There is continuously active sheet flow, creep, and channelled stream flow. Typical elements: hillcrest, hillslope (dominant), drainage depression, stream bed. Common elements: footslope, alcove, valley flat, gully. Occasional elements: tor, summit surface, landslide, doline. Compare with Mountains, Hills, Rises and Plain.</description>
+          </term>
+          <term> {RIS}
+            <description>Landform pattern of very low relief (9-30 m) and very gentle to steep slopes. The fixed, erosional stream channels are closely to very widely spaced and form a non-directional to convergent, integrated or interrupted tributary pattern. The pattern is eroded by continuously active to barely active creep and sheet flow. Typical elements: hillcrest, hillslope (dominant), footslope, drainage depression, riseslope. Common elements: valley flat, stream channel. Occasional elements: gully, fan, tor. Compare with Mountains, Hills, Low hills and Plain.</description>
+          </term>
+        </term>
+        <term> {cCoastal_and_marine}
+          <description/>
+          <term> {BEA}
+            <description>Level to gently undulating landform pattern of extremely low relief on which stream channels are absent or very rare; it consists of relict, parallel beach ridges. Typical elements: beach ridge (co-dominant), swale  (co-dominant). Common elements: beach, foredune, tidal creek. Compare with Chenier plain.</description>
+          </term>
+          <term> {CHE}
+            <description>Level to gently undulating landform pattern of extremely low relief on which stream channels are very rare. The pattern consists of relict, parallel, linear ridges built up by waves, separated by, and built over, flats (mud flats) aggraded by tides or overbank stream flow. Typical elements: beach ridge (co-dominant), flat (co-dominant). Common elements: tidal flat, swamp, beach, foredune, tidal creek. Compare with Beach ridge plain.</description>
+          </term>
+          <term> {MAR}
+            <description>Plain eroded or aggraded by waves, tides, or submarine currents, and aggraded by deposition of material from suspension and solution in sea water, elevated above sea level by earth movements or eustasy, and little modified by subaerial agents such as stream flow or wind. Typical element: plain. Occasional elements: dune, stream channel.</description>
+          </term>
+          <term> {MEA}
+            <description>Plain eroded or aggraded by waves, tides, or submarine currents, and aggraded by deposition of material from suspension and solution in sea water, elevated above sea level by earth movements or eustasy, and little modified by subaerial agents such as stream flow or wind. Typical element: plain. Occasional elements: dune, stream channel</description>
+          </term>
+          <term> {TID}
+            <description>Level landform pattern with extremely low relief and slowly migrating, deep alluvial stream channels, which form non-directional, integrated tributary patterns; it is aggraded by frequently active tides. Typical elements: plain (dominant), intertidal flat, supratidal flat, stream channel. Occasional elements: lagoon, dune, beach ridge, beach.</description>
+          </term>
+        </term>
+        <term> {dWindborne_landscapes}
+          <description/>
+          <term> {DUN}
+            <description>Level to rolling landform pattern of very low or extremely low relief  without stream channels, built up or locally excavated, eroded or aggraded by wind. Typical elements: dune or dunecrest, duneslope, swale, blow-out, risecrest, residual rise, riseslope. Common elements: hummocky dune, barchan dune, parabolic dune, linear dune. Included types of landform pattern are: longitudinal dunefield, parabolic dunefield</description>
+          </term>
+          <term> {LON}
+            <description>Dunefield characterised by long, narrow sand dunes and wide, flat swales. The dunes are oriented parallel with the direction of the prevailing wind, and in cross-section one slope is typically steeper than the other. Typical elements: dune or dunecrest, duneslope, swale, blow-out. Compare with Parabolic dunefield.</description>
+          </term>
+          <term> {PAR}
+            <description>Fixed, erosional stream channels that are closely to very widely spaced and form a non-directional or diverging, integrated tributary network. There is continuously active erosion by collapse, landslide, sheet flow, creep, and channelled stream flow. Typical elements: hillcrest, hillslope (dominant), stream bed. Common elements: talus, landslide, alcove, valley flat, scarp. Occasional elements: cirque, footslope. Compare with Hills, Low hills, Rises and Plain.</description>
+          </term>
+        </term>
+        <term> {eLow_relief_plains}
+          <description/>
+          <term> {LAC}
+            <description>Level landform pattern with extremely low relief formerly occupied by a lake but now partly or completely dry. It is relict after aggradation by waves and by deposition of material from suspension and solution in standing water. The pattern is usually bounded by wave-formed features such as cliffs, rock platforms, beaches, berms and lunettes. These may be included or excluded. Typical element: plain. Common elements: beach, cliff. Occasional elements: rock platform, berm. Compare with Playa plain.</description>
+          </term>
+          <term> {PED}
+            <description>Gently inclined to level (less than 1%) landform pattern of extremely low relief, typically with numerous rapidly migrating, very shallow incipient stream channels, which form a centrifugal to diverging, integrated reticulated pattern. It is underlain by bedrock, eroded, and locally aggraded, by frequently active channelled stream flow or sheet flow, with subordinate wind erosion. Pediments characteristically lie downslope from adjacent hills with markedly steeper slopes. Typical elements: pediment, plain, stream bed. Compare with Sheet-flood fan and Alluvial fan</description>
+          </term>
+          <term> {PEP}
+            <description>Level to very gently inclined landform pattern with extremely low relief and no stream channels, eroded by barely active sheet flow and wind. Largely relict from more effective erosion by stream flow in incipient stream channels as on a pediment. (Described by King 1953.) Typical element: plain.</description>
+          </term>
+          <term> {PNP}
+            <description>Level to very gently inclined landform pattern with extremely low relief and no stream channels, eroded by barely active sheet flow and wind. Largely relict from more effective erosion by stream flow in incipient stream channels as on a pediment. Typical element: plain.</description>
+          </term>
+          <term> {PLA}
+            <description>Level to undulating or, rarely, rolling landform pattern of extremely low relief (less than 9 m). Compare with Mountains, Hills, Low hills and Rises.</description>
+          </term>
+          <term> {PLT}
+            <description>Level to rolling landform pattern of plains, rises or low hills standing above a cliff, scarp or escarpment that extends around a large part of its perimeter. A bounding scarp or cliff landform element may be included or excluded; a bounding escarpment would be an adjacent landform pattern. Typical elements: plain, summit surface, cliff. Common elements: hillcrest, hillslope, drainage depression, rock flat, scarp. Occasional element: stream channel.</description>
+          </term>
+          <term> {PLY}
+            <description>Level landform pattern with extremely low relief, typically without stream channels, aggraded by rarely active sheet flow and modified by wind, waves, and soil phenomena. Typical elements: playa, lunette, plain. Compare with Lacustrine plain.</description>
+          </term>
+        </term>
+        <term> {fAnthopogenic}
+          <description/>
+          <term> {MAD}
+            <description>Landform pattern typically of very low or extremely low relief and with slopes either level or very steep. Sparse, fixed, deep, artificial stream channels form a non-directional, interrupted tributary pattern. The landform pattern is eroded and aggraded, and locally built up or excavated, by rarely active human agency. Typical elements: fill-top (dominant), cut-over surface, cut face, embankment, berm, trench. Common elements: mound, pit, dam</description>
+          </term>
+        </term>
+        <term> {gHigh_relief}
+          <description/>
+          <term> {MOU}
+            <description>Landform pattern of very high relief (greater than 300 m) with moderate to precipitous slopes and fixed, erosional stream channels that are closely to very widely spaced and form a non-directional or diverging, integrated tributary network. There is continuously active erosion by collapse, landslide, sheet flow, creep, and channelled stream flow. Typical elements: hillcrest, hillslope (dominant), stream bed. Common elements: talus, landslide, alcove, valley flat, scarp. Occasional elements: cirque, footslope. Compare with Hills, Low hills, Rises and Plain</description>
+          </term>
+        </term>
+      </lookup>
+    </property>
+    <property name="Landform element" type="enum">
+      <description></description>
+      <lookup>
+        <term>{0No_Observation}
           <description/>
         </term>
-        <term> {ANA}
+        <term> {aEroded_depressed_or_deflated_elements}
           <description/>
+          <term> {ALC}
+            <description>Moderately inclined to very steep, short open depression with concave cross-section, eroded by collapse, landslides, creep or surface wash.</description>
+          </term>
+          <term> {BOU}
+            <description>Usually small, open or closed depression excavated by the wind</description>
+          </term>
+          <term> {CRA}
+            <description>Steep to precipitous closed depression excavated by explosions due to volcanism, human action, or impact of an extraterrestrial object</description>
+          </term>
+          <term> {DBA}
+            <description>Basin excavated by wind erosion which removes loose material, commonly above a resistant or wet layer.</description>
+          </term>
+          <term> {DDE}
+            <description>Level to gently inclined, long, narrow, shallow open depression with smoothly concave cross-section, rising to moderately inclined side slopes, eroded or aggraded by sheet wash.</description>
+          </term>
+          <term> {DOL}
+            <description>Steep-sided, circular or elliptical closed depression, commonly funnel-shaped, characterised by subsurface drainage and formed by dissolution of the surface or underlying bedrock.</description>
+          </term>
+          <term> {PLA}
+            <description>Large, shallow, level-floored closed depression, intermittently water-filled, but mainly dry due to evaporation, bounded as a rule by flats aggraded by sheet flow and channelled stream flow.</description>
+          </term>
         </term>
-        <term> {BAD}
+        <term> {bStream_and_floodplain_elements}
           <description/>
+          <term> {BKP}
+            <description>Large flat resulting from aggradation by overbank stream flow at some distance from the stream channel and in some cases biological (peat) accumulation; often characterised by a high watertable and the presence of swamps or lakes; part of a covered plain landform pattern.</description>
+          </term>
+          <term> {BAN}
+            <description>Stream bank. Very short, very wide slope, moderately inclined to precipitous, forming the marginal upper parts of a stream channel and resulting from erosion or aggradation by channelled stream flow</description>
+          </term>
+          <term> {BAR}
+            <description>Stream bar. Elongated, gently to moderately inclined, low ridge built up by channelled stream flow; part of a stream bed.</description>
+          </term>
+          <term> {CBE}
+            <description>Flat at the margin of a stream channel aggraded and partly eroded by overbank and channelled stream flow; an incipient flood plain. Channel benches have been referred to as 'low terraces', but the term 'terrace' should be restricted to landform patterns above the influence of active stream flow.</description>
+          </term>
+          <term> {FAN}
+            <description>Large, gently inclined to level element with radial slope lines inclined away from a point, resulting from aggradation, or occasionally from erosion, by channelled, often braided, stream flow, or possibly by sheet flow.</description>
+          </term>
+          <term> {FLD}
+            <description>Flat inclined radially away from a point on the margin or at the end of a stream channel, aggraded by overbank stream flow, or by channelled stream flow associated with channels developed within the overbank flow; part of a covered plain landform pattern.</description>
+          </term>
+          <term> {LEV}
+            <description>Very long, low, narrow, nearly level, sinuous ridge immediately adjacent to a stream channel, built up by overbank flow. Levees are built, usually in pairs bounding the two sides of a stream channel, at the level reached by frequent floods. This element is part of a covered plain landform pattern. For an artificial levee, use Embankment. See also Prior stream.</description>
+          </term>
+          <term> {OXB}
+            <description>Long, curved, commonly water-filled closed depression eroded by channelled stream flow but closed as a result of aggradation by channelled or overbank stream flow during the formation of a meander plain landform pattern. The floor of an ox-bow may be more or less aggraded by overbank stream flow, wind, and biological (peat) accumulation.</description>
+          </term>
+          <term> {PST}
+            <description>Long, generally sinuous, low ridge built up from materials originally deposited by stream flow along the line of a former stream channel. The landform element may include a depression marking the old stream bed, and relict levees.</description>
+          </term>
+          <term> {SCR}
+            <description>Long, curved, very low ridge built up by channelled stream flow and left relict by channel migration. Part of a meander plain landform pattern.</description>
+          </term>
+          <term> {SRP}
+            <description>Large flat resulting from aggradation by channelled stream flow as a stream migrates from side to side; the dominant element of a meander plain landform pattern. This landform element may include occurrences of scroll, swale and ox-bow.</description>
+          </term>
+          <term> {STB}
+            <description>linear, generally sinuous open depression forming the bottom of a stream channel, eroded and locally excavated, aggraded or built up by channelled stream flow. Parts that are built up include bars.</description>
+          </term>
+          <term> {STC}
+            <description>Linear, generally sinuous open depression, in parts eroded, excavated, built up and aggraded by channelled stream flow. This element comprises stream bed and banks.</description>
+          </term>
+          <term> {TEF}
+            <description>Small flat aggraded or eroded by channelled or overbank stream flow, standing above a scarp and no longer frequently inundated; a former valley flat or part of a former flood plain.</description>
+          </term>
+          <term> {TEP}
+            <description>Large or very large flat aggraded by channelled or overbank stream flow, standing above a scarp and no longer frequently inundated; part of a former flood plain. </description>
+          </term>
         </term>
-        <term> {BAR}
+        <term> {cDune_and_swale_elements}
           <description/>
+          <term> {DUB}
+            <description>A crescent-shaped dune with tips extending leeward (downwind), making this side concave and the windward (upwind) side convex. Barchan dunes tend to be arranged in chains extending in the dominant wind direction.</description>
+          </term>
+          <term> {DUN}
+            <description>Moderately inclined to very steep ridge or hillock built up by the wind. This element may comprise dunecrest and duneslope.</description>
+          </term>
+          <term> {DUC}
+            <description>Crest built up or eroded by the wind (see Dune)</description>
+          </term>
+          <term> {DUS}
+            <description>Slope built up or eroded by the wind (see Dune)</description>
+          </term>
+          <term> {FOR}
+            <description>Very long, nearly straight, moderately inclined to very steep ridge built up by the wind from material from an adjacent beach.</description>
+          </term>
+          <term> {DUH}
+            <description>Weakly oriented dune. Very gently to moderately inclined rises or hillocks built up or eroded by wind and lacking  distinct orientation or regular pattern</description>
+          </term>
+          <term> {DUF}
+            <description>Seif. Large, sharp-crested, elongated, longitudinal (linear) dune or chain of sand dunes, oriented parallel, rather than transverse (perpendicular), to the prevailing wind. (Not to be confused with the trailing arms of parabolic dunes.)</description>
+          </term>
+          <term> {LUN}
+            <description>Elongated, gently curved, low ridge built up by wind on the margin of a playa, typically with a moderate, wave- modified slope towards the playa and a gentle outer slope.</description>
+          </term>
+          <term> {DUP}
+            <description>Sand dune with a long, scoop-shaped form, convex in the downwind direction so that its horns point upwind, whose ground plan approximates the form of a parabola. The dunes left behind can be referred to as trailing arms. Where many such dunes have traversed an area, these can give the appearance of linear dunes.</description>
+          </term>
+          <term> {SWL}
+            <description>(i) linear, level-floored open depression excavated by wind, or left relict between ridges built up by wind or waves, or built up to a lesser height than them. (ii) long, curved open or closed depression left relict between scrolls built up by channelled stream flow.</description>
+          </term>
         </term>
-        <term> {BEA}
+        <term> {dCoastal_and_estuarine_elements}
           <description/>
+          <term> {BEA}
+            <description>Short, low, very wide slope, gently or moderately inclined, built up or eroded by waves, forming the shore of a lake or sea </description>
+          </term>
+          <term> {BRI}
+            <description>Very long, nearly straight, low ridge, built up by waves and usually modified by wind. A beach ridge is often a relict feature remote from the beach</description>
+          </term>
+          <term> {BER}
+            <description>(ii) flat built up by waves above a beach.</description>
+          </term>
+          <term> {EST}
+            <description>Stream channel close to its junction with a sea or lake, where the action of channelled stream flow is modified by tide and waves. The width typically increases downstream</description>
+          </term>
+          <term> {REF}
+            <description>Flat built up to sea level by marine organisms.</description>
+          </term>
         </term>
-        <term> {CAL}
+        <term> {eHill_and_rise_elements}
           <description/>
+          <term> {BEN}
+            <description>Short, gently or very gently inclined minimal mid-slope element eroded or aggraded by any agent.</description>
+          </term>
+          <term> {FOO}
+            <description>Moderately to very gently inclined waning lower slope resulting from aggradation or erosion by sheet flow, earth flow or creep (cf. Pediment).</description>
+          </term>
+          <term> {HCR}
+            <description>Very gently inclined to steep crest, smoothly convex, eroded mainly by creep and sheet wash. A typical element of mountains, hills, low hills and rises</description>
+          </term>
+          <term> {HSL}
+            <description>Gently inclined to precipitous slope, commonly simple and maximal, eroded by sheet wash, creep or water-aided mass movement. A typical element of mountains, hills, low hills and rises</description>
+          </term>
+          <term> {PED}
+            <description>Large, gently inclined to level (&lt;1%) waning lower slope, with slope lines inclined in a single direction, or somewhat convergent or divergent, eroded or sometimes slightly aggraded by sheet flow (cf. Footslope). It is underlain by bedrock.</description>
+          </term>
+          <term> {RER}
+            <description>Hillock of very low to extremely low relief (&lt;30 m) and very gentle to steep slopes. This term is used to refer to an isolated rise surrounded by other landforms.</description>
+          </term>
+          <term> {REC}
+            <description>Crest of hillock of very low to extremely low relief (&lt;30 m)</description>
+          </term>
+          <term> {RES}
+            <description>Slope of hillock of very low to extremely low relief (&lt;30 m).</description>
+          </term>
+          <term> {TUM}
+            <description>Hillock heaved up by volcanism. In other settings, built up by human activity at a burial site.</description>
+          </term>
         </term>
-        <term> {CHE}
+        <term> {fAnthropogenic_elements}
           <description/>
+          <term> {BEH}
+            <description>(i) short, very gently inclined to level minimal mid-slope in an embankment or cut face, eroded or aggraded by human activity.</description>
+          </term>
+          <term> {CUT}
+            <description>Slope eroded by human activity</description>
+          </term>
+          <term> {COS}
+            <description>Flat eroded by human activity</description>
+          </term>
+          <term> {DAM}
+            <description>Ridge built up by human activity so as to close a depression</description>
+          </term>
+          <term> {EMB}
+            <description>Ridge or slop built up by human activity</description>
+          </term>
+          <term> {FIL}
+            <description>Flat aggraded by human activity</description>
+          </term>
+          <term> {MOU}
+            <description>Hillock built up by human activity</description>
+          </term>
+          <term> {PIT}
+            <description>Closed depression excavated by human activity.</description>
+          </term>
+          <term> {TRE}
+            <description>Open depression excavated by human activity</description>
+          </term>
         </term>
-        <term> {COR}
+        <term> {gCliff_and_scarp_elements}
           <description/>
+          <term> {BRK}
+            <description>Steep maximal mid-slope or upper slope, generally comprising both a very short scarp (free face) that is often bare rockland, and a stony scarp-footslope (debris slope); often standing above a pediment.</description>
+          </term>
+          <term> {CLI}
+            <description>Very wide, cliffed (greater than 72°) maximal slope usually eroded by gravitational fall as a result of erosion of the base by various agencies; sometimes built up by marine organisms (cf. Scarp).</description>
+          </term>
+          <term> {CFS}
+            <description>Slope situated below a cliff, with its contours generally parallel to the line of the cliff, eroded by sheet wash or water-aided mass movement, and aggraded locally by collapsed material from above</description>
+          </term>
+          <term> {LDS}
+            <description>Moderately inclined to very steep slope, eroded in the upper part and aggraded in the lower part by water-aided mass movement, characterised by irregular hummocks.</description>
+          </term>
+          <term> {SCA}
+            <description>Very wide, steep to precipitous maximal slope eroded by gravity, water-aided mass movement or sheet flow (cf. Cliff).</description>
+          </term>
+          <term> {SFS}
+            <description>Waning or minimal slope situated below a scarp, with its contours generally parallel to the line of the scarp.</description>
+          </term>
+          <term> {SUS}
+            <description>Very wide, level to gently inclined crest with abrupt margins, commonly eroded by water-aided  mass movement or sheet wash.</description>
+          </term>
+          <term> {TAL}
+            <description>Moderately inclined or steep waning lower slope, consisting of rock fragments aggraded by gravity.</description>
+          </term>
         </term>
-        <term> {COV}
+        <term> {hPlain_and_gully_elements}
           <description/>
+          <term> {GUL}
+            <description>Open depression with short, precipitous walls and moderately inclined to very gently inclined floor or small stream channel, eroded by channelled stream flow and consequent collapse and water-aided mass movement.</description>
+          </term>
+          <term> {VLF}
+            <description>Small, gently inclined to level flat, aggraded or sometimes eroded by channelled or overbank  stream flow, typically enclosed by hillslopes; a miniature alluvial plain landform pattern</description>
+          </term>
         </term>
-        <term> {DEL}
+        <term> {iFresh_water_elements}
           <description/>
+          <term> {LAG}
+            <description>Closed depression filled with water that is typically salt or brackish, bounded at least in part by forms aggraded or built up by waves or reef-building organisms.</description>
+          </term>
+          <term> {LAK}
+            <description>Large, water-filled closed depression.</description>
+          </term>
+          <term> {SWP}
+            <description>almost level, closed or almost closed depression with a seasonal or permanent watertable at or above the surface, commonly aggraded by overbank stream flow and sometimes biological (peat) accumulation</description>
+          </term>
         </term>
-        <term> {DUN}
+        <term> {jRock_and_scald_elements}
           <description/>
+          <term> {RFL}
+            <description>Flat of bare consolidated rock, ususally eroded by sheet wash</description>
+          </term>
+          <term> {RPL}
+            <description>Flot of consolidated rock eroded by waves</description>
+          </term>
+          <term> {SCD}
+            <description>Flat, bare of vegetation, from which soil has been eroded or excavated by surface wash or wind. </description>
+          </term>
+          <term> {TOR}
+            <description>Steep to precipitous hillock, typically convex, with a surface mainly of bare rock, either coherent or comprising subangular to rounded, large boulders (exhumed core-stones, also themselves called tors) separated by open fissures; eroded by sheet wash or water-aided mass movement.</description>
+          </term>
         </term>
-        <term> {ESC}
+        <term> {kEstuarine_and_tidal_elements}
           <description/>
-        </term>
-        <term> {FLO}
-          <description/>
-        </term>
-        <term> {HIL}
-          <description/>
-        </term>
-        <term> {KAR}
-          <description/>
-        </term>
-        <term> {LAC}
-          <description/>
-        </term>
-        <term> {LAV}
-          <description/>
-        </term>
-        <term> {LON}
-          <description/>
-        </term>
-        <term> {LOW}
-          <description/>
-        </term>
-        <term> {MAD}
-          <description/>
-        </term>
-        <term> {MAR}
-          <description/>
-        </term>
-        <term> {MEA}
-          <description/>
-        </term>
-        <term> {MET}
-          <description/>
-        </term>
-        <term> {MOU}
-          <description/>
-        </term>
-        <term> {PAR}
-          <description/>
-        </term>
-        <term> {PED}
-          <description/>
-        </term>
-        <term> {PEP}
-          <description/>
-        </term>
-        <term> {PNP}
-          <description/>
-        </term>
-        <term> {PLA}
-          <description/>
-        </term>
-        <term> {PLT}
-          <description/>
-        </term>
-        <term> {PLY}
-          <description/>
-        </term>
-        <term> {RIS}
-          <description/>
-        </term>
-        <term> {SAN}
-          <description/>
-        </term>
-        <term> {SHF}
-          <description/>
-        </term>
-        <term> {STA}
-          <description/>
-        </term>
-        <term> {TER}
-          <description/>
-        </term>
-        <term> {TEL}
-          <description/>
-        </term>
-        <term> {TID}
-          <description/>
-        </term>
-        <term> {VOL}
-          <description/>
+          <term> {TDC}
+            <description>Intermittently water-filled open depression in parts eroded, excavated, built up and aggraded by channelled tide-water flow; type of stream channel characterised by a rapid increase in width downstream.</description>
+          </term>
+          <term> {ITF}
+            <description>Large flat subject to inundation by water that is usually salt or brackish, aggraded by tides. An intertidal flat (ITF) is frequently inundated; a supratidal flat (STF) is seldom inundated</description>
+          </term>
+          <term> {STF}
+            <description>Large flat subject to inundation by water that is usually salt or brackish, aggraded by tides. An intertidal flat (ITF) is frequently inundated; a supratidal flat (STF) is seldom inundated</description>
+          </term>
         </term>
       </lookup>
     </property>
@@ -253,91 +528,109 @@
         <term>{0No_Observation}
           <description/>
         </term>
-        <term> {a1.0}
-          <description>Description TBD</description>
+        <term>{a0.0}
+          <description/>
+          <term> {a1.0}
+            <description>Dicotyledonous or monocotyledonous plants growing for a significant portion of their life cycle in fresh or brackish water. This may include various woody vegetation such as mangroves, eucalypt, melaleuca or other woody, periodically submerged vegetation, which span saline aquatic environments from brackish to hypersaline.</description>
+          </term>
           <term> {a2.0}
-            <description>Description TBD</description>
+            <description>Genera and species of flowering angiosperms of the families Hydrocharitaceae and Potamogetonaceae, forming sparse to dense mats of material at the subtidal level and down to 30 m below mean sea level. Occasionally exposed (e.g. at low tides).</description>
           </term>
           <term> {a3.0}
-            <description>Description TBD</description>
+            <description>A member of the Chlorophyta, Cyanophyta Phaeophyta or Rhodophyta living in fresh or brackish aquatic environments.</description>
           </term>
           <term> {a4.0}
-            <description>Description TBD</description>
+            <description>A member of the Chlorophyta, Cyanophyta, Phaeophyta or Rhodophyta living in marine environments. May range from thin surface- hugging layers to tall algal forests.</description>
           </term>
         </term>
         <term> {b1.0}
-          <description>Description TBD</description>
+          <description>Soil, rock or water surfaces with less than 0.5% plant cover.</description>
         </term>
         <term> {c1.0}
-          <description>Description TBD</description>
+          <description>Assemblages of one or more species of minute plants at or within the surface of soil or rock. May consist of bryophytes, lichens, cyanobacteria, green algae and fungi; may in some cases include very small vascular plants.</description>
         </term>
         <term> {f1.0}
-          <description>Description TBD</description>
+          <description>A member of the Division Pterophyta (i.e.ferns and fern allies). Characterised by large and usually branched leaves (fronds); herbaceous and terrestrial to aquatic; spores in sporangia on the undersides of leaves. Tree ferns are classified with woody plants as they have the same vegetation structure.</description>
         </term>
-        <term> {g1.0}
-          <description>Description TBD</description>
+        <term> {g0.0}
+          <description/>
+          <term> {g1.0}
+            <description>Member of the family Poaceae.</description>
+          </term>
           <term> {g2.0}
-            <description>Description TBD</description>
+            <description>Coarse xeromorphic grass with a mound-like form often dead in the middle; genera are Triodia, Plectrachne and Zygochloa</description>
           </term>
           <term> {g3.0}
-            <description>Description TBD</description>
+            <description>Grasses forming discrete but open tufts usually with distinct individual shoots. These include the common agricultural grasses.</description>
           </term>
           <term> {g4.0}
-            <description>Description TBD</description>
+            <description>Member of the Poaceae planted or cultivated for specific human uses (e.g. human or other animal food, lawn or other ground cover)</description>
           </term>
           <term> {g5.0}
-            <description>Description TBD</description>
+            <description>Herbaceous, usually perennial, erect plant generally with a tufted habit and of the families Cyperaceae (true sedges) or Restionaceae (node sedges). </description>
           </term>
           <term> {g6.0}
-            <description>Description TBD</description>
+            <description>Herbaceous, usually perennial, erect monocot that is neither a grass nor a sedge. According to the ASLSFH, rushes include the monocotyledon families Juncaceae, Typhaceae, Liliaceae, Iridaceae, Xyridacea and the genus Lomandra, i.e. 'graminoid' or grass-like genera.</description>
           </term>
         </term>
-        <term> {h1.0}
-          <description>Description TBD</description>
+        <term> {h0.0}
+          <description/>
+          <term> {h1.0}
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Forbs are non-graminoid herbaceous plants, ie. a flowering plant that is not a grass, that have a non-woody stem. Compare with 'Herb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegetation.</description>
+          </term>
           <term> {h2.0}
-            <description>Description TBD</description>
-            <term> {h2.1}
-              <description>Description TBD</description>
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Herbs have a slightly woody stem. Compare with 'Forb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegeation.</description>
+          </term>
+          <term> {h2.1}
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Planted/cultivated annual or perennial herbaceous plant (monocotyledon or dicotyledon, non-woody stem); includes those cultivated for food or non-food purposes.</description>
+          </term>
+        </term>
+        <term> {lm0.0}
+          <description/>
+          <term> {l1.0}
+            <description>Composite plant consisting of a fungus living symbiotically with algae or cyanobacteria; without true roots, stems or leaves</description>
+          </term>
+          <term> {m1.0}
+            <description>A member of the Division Bryophyta (i.e. mosses and liverworts). Mosses are small plants usually with a slender leaf-bearing stem with no true vascular tissue. Liverwort often appear moss-like or consist of a flat, ribbon-like, green thallus. </description>
+          </term>
+        </term>
+        <term> {w0.0}
+          <description/>
+          <term> {w1.0}
+            <description>Woody plant more than 2 m tall usually with a single stem, or branches well above the base; not always distinguishable from large shrubs.</description>
+            <term> {w1.1}
+              <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
+            </term>
+            <term> {w1.2}
+              <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
             </term>
           </term>
-        </term>
-        <term> {l1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {m1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {v1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {w1.0}
-          <description>Description TBD</description>
-          <term> {w1.1}
-            <description>Description TBD</description>
+          <term> {w2.0}
+            <description>Plants with woody tissues. For the purposes of vegetation classification here, also those plants that achieve a growth form similar to that of woody plants (e.g. cycads, palms, tree ferns). Includes both trees and shrubs.</description>
           </term>
-          <term> {w1.2}
-            <description>Description TBD</description>
-          </term>
-        </term>
-        <term> {w2.0}
-          <description>Description TBD</description>
           <term> {w2.1}
-            <description>Description TBD</description>
+            <description>Any of the eucalypt trees or shrubs with multiple stems arising from a lignotuber.</description>
           </term>
         </term>
-        <term> {w3.0}
-          <description>Description TBD</description>
+        <term> {v0.0}
+          <description/>
+          <term> {v1.0}
+            <description>Climbing, twining, winding or sprawling plants usually with a woody stem.</description>
+          </term>
+          <term> {w3.0}
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
+          </term>
           <term> {w3.1}
-            <description>Description TBD</description>
+            <description>Shrub usually less than 2 m tall, commonly with ericoid leaves (nanophyll, less than 225 mm2). Often a member of one of the following families: Epacridaceae, Myrtaceae, Fabaceae and Proteaceae. Commonly occur on nutrient-poor substrates.</description>
           </term>
           <term> {w3.2}
-            <description>Description TBD</description>
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
           </term>
           <term> {w3.3}
-            <description>Description TBD</description>
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
           </term>
           <term> {w3.4}
-            <description>Description TBD</description>
+            <description>Shrubs planted in rows for the production of food crops.</description>
           </term>
         </term>
       </lookup>
@@ -348,91 +641,109 @@
         <term>{0No_Observation}
           <description/>
         </term>
-        <term> {a1.0}
-          <description>Description TBD</description>
+        <term>{a0.0}
+          <description/>
+          <term> {a1.0}
+            <description>Dicotyledonous or monocotyledonous plants growing for a significant portion of their life cycle in fresh or brackish water. This may include various woody vegetation such as mangroves, eucalypt, melaleuca or other woody, periodically submerged vegetation, which span saline aquatic environments from brackish to hypersaline.</description>
+          </term>
           <term> {a2.0}
-            <description>Description TBD</description>
+            <description>Genera and species of flowering angiosperms of the families Hydrocharitaceae and Potamogetonaceae, forming sparse to dense mats of material at the subtidal level and down to 30 m below mean sea level. Occasionally exposed (e.g. at low tides).</description>
           </term>
           <term> {a3.0}
-            <description>Description TBD</description>
+            <description>A member of the Chlorophyta, Cyanophyta Phaeophyta or Rhodophyta living in fresh or brackish aquatic environments.</description>
           </term>
           <term> {a4.0}
-            <description>Description TBD</description>
+            <description>A member of the Chlorophyta, Cyanophyta, Phaeophyta or Rhodophyta living in marine environments. May range from thin surface- hugging layers to tall algal forests.</description>
           </term>
         </term>
         <term> {b1.0}
-          <description>Description TBD</description>
+          <description>Soil, rock or water surfaces with less than 0.5% plant cover.</description>
         </term>
         <term> {c1.0}
-          <description>Description TBD</description>
+          <description>Assemblages of one or more species of minute plants at or within the surface of soil or rock. May consist of bryophytes, lichens, cyanobacteria, green algae and fungi; may in some cases include very small vascular plants.</description>
         </term>
         <term> {f1.0}
-          <description>Description TBD</description>
+          <description>A member of the Division Pterophyta (i.e.ferns and fern allies). Characterised by large and usually branched leaves (fronds); herbaceous and terrestrial to aquatic; spores in sporangia on the undersides of leaves. Tree ferns are classified with woody plants as they have the same vegetation structure.</description>
         </term>
-        <term> {g1.0}
-          <description>Description TBD</description>
+        <term> {g0.0}
+          <description/>
+          <term> {g1.0}
+            <description>Member of the family Poaceae.</description>
+          </term>
           <term> {g2.0}
-            <description>Description TBD</description>
+            <description>Coarse xeromorphic grass with a mound-like form often dead in the middle; genera are Triodia, Plectrachne and Zygochloa</description>
           </term>
           <term> {g3.0}
-            <description>Description TBD</description>
+            <description>Grasses forming discrete but open tufts usually with distinct individual shoots. These include the common agricultural grasses.</description>
           </term>
           <term> {g4.0}
-            <description>Description TBD</description>
+            <description>Member of the Poaceae planted or cultivated for specific human uses (e.g. human or other animal food, lawn or other ground cover)</description>
           </term>
           <term> {g5.0}
-            <description>Description TBD</description>
+            <description>Herbaceous, usually perennial, erect plant generally with a tufted habit and of the families Cyperaceae (true sedges) or Restionaceae (node sedges). </description>
           </term>
           <term> {g6.0}
-            <description>Description TBD</description>
+            <description>Herbaceous, usually perennial, erect monocot that is neither a grass nor a sedge. According to the ASLSFH, rushes include the monocotyledon families Juncaceae, Typhaceae, Liliaceae, Iridaceae, Xyridacea and the genus Lomandra, i.e. 'graminoid' or grass-like genera.</description>
           </term>
         </term>
-        <term> {h1.0}
-          <description>Description TBD</description>
+        <term> {h0.0}
+          <description/>
+          <term> {h1.0}
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Forbs are non-graminoid herbaceous plants, ie. a flowering plant that is not a grass, that have a non-woody stem. Compare with 'Herb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegetation.</description>
+          </term>
           <term> {h2.0}
-            <description>Description TBD</description>
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Herbs have a slightly woody stem. Compare with 'Forb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegeation.</description>
             <term> {h2.1}
-              <description>Description TBD</description>
+              <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Planted/cultivated annual or perennial herbaceous plant (monocotyledon or dicotyledon, non-woody stem); includes those cultivated for food or non-food purposes.</description>
             </term>
           </term>
         </term>
-        <term> {l1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {m1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {v1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {w1.0}
-          <description>Description TBD</description>
-          <term> {w1.1}
-            <description>Description TBD</description>
+        <term> {lm0.0}
+          <description/>
+          <term> {l1.0}
+            <description>Composite plant consisting of a fungus living symbiotically with algae or cyanobacteria; without true roots, stems or leaves</description>
           </term>
-          <term> {w1.2}
-            <description>Description TBD</description>
+          <term> {m1.0}
+            <description>A member of the Division Bryophyta (i.e. mosses and liverworts). Mosses are small plants usually with a slender leaf-bearing stem with no true vascular tissue. Liverwort often appear moss-like or consist of a flat, ribbon-like, green thallus. </description>
           </term>
         </term>
-        <term> {w2.0}
-          <description>Description TBD</description>
-          <term> {w2.1}
-            <description>Description TBD</description>
+        <term> {w0.0}
+          <description/>
+          <term> {w1.0}
+            <description>Woody plant more than 2 m tall usually with a single stem, or branches well above the base; not always distinguishable from large shrubs.</description>
+            <term> {w1.1}
+              <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
+            </term>
+            <term> {w1.2}
+              <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
+            </term>
+          </term>
+          <term> {w2.0}
+            <description>Plants with woody tissues. For the purposes of vegetation classification here, also those plants that achieve a growth form similar to that of woody plants (e.g. cycads, palms, tree ferns). Includes both trees and shrubs.</description>
+            <term> {w2.1}
+              <description>Any of the eucalypt trees or shrubs with multiple stems arising from a lignotuber.</description>
+            </term>
           </term>
         </term>
-        <term> {w3.0}
-          <description>Description TBD</description>
+        <term> {v0.0}
+          <description/>
+          <term> {v1.0}
+            <description>Climbing, twining, winding or sprawling plants usually with a woody stem.</description>
+          </term>
+          <term> {w3.0}
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
+          </term>
           <term> {w3.1}
-            <description>Description TBD</description>
+            <description>Shrub usually less than 2 m tall, commonly with ericoid leaves (nanophyll, less than 225 mm2). Often a member of one of the following families: Epacridaceae, Myrtaceae, Fabaceae and Proteaceae. Commonly occur on nutrient-poor substrates.</description>
           </term>
           <term> {w3.2}
-            <description>Description TBD</description>
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
           </term>
           <term> {w3.3}
-            <description>Description TBD</description>
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
           </term>
           <term> {w3.4}
-            <description>Description TBD</description>
+            <description>Shrubs planted in rows for the production of food crops.</description>
           </term>
         </term>
       </lookup>
@@ -443,91 +754,109 @@
         <term>{0No_Observation}
           <description/>
         </term>
-        <term> {a1.0}
-          <description>Description TBD</description>
+        <term>{a0.0}
+          <description/>
+          <term> {a1.0}
+            <description>Dicotyledonous or monocotyledonous plants growing for a significant portion of their life cycle in fresh or brackish water. This may include various woody vegetation such as mangroves, eucalypt, melaleuca or other woody, periodically submerged vegetation, which span saline aquatic environments from brackish to hypersaline.</description>
+          </term>
           <term> {a2.0}
-            <description>Description TBD</description>
+            <description>Genera and species of flowering angiosperms of the families Hydrocharitaceae and Potamogetonaceae, forming sparse to dense mats of material at the subtidal level and down to 30 m below mean sea level. Occasionally exposed (e.g. at low tides).</description>
           </term>
           <term> {a3.0}
-            <description>Description TBD</description>
+            <description>A member of the Chlorophyta, Cyanophyta Phaeophyta or Rhodophyta living in fresh or brackish aquatic environments.</description>
           </term>
           <term> {a4.0}
-            <description>Description TBD</description>
+            <description>A member of the Chlorophyta, Cyanophyta, Phaeophyta or Rhodophyta living in marine environments. May range from thin surface- hugging layers to tall algal forests.</description>
           </term>
         </term>
         <term> {b1.0}
-          <description>Description TBD</description>
+          <description>Soil, rock or water surfaces with less than 0.5% plant cover.</description>
         </term>
         <term> {c1.0}
-          <description>Description TBD</description>
+          <description>Assemblages of one or more species of minute plants at or within the surface of soil or rock. May consist of bryophytes, lichens, cyanobacteria, green algae and fungi; may in some cases include very small vascular plants.</description>
         </term>
         <term> {f1.0}
-          <description>Description TBD</description>
+          <description>A member of the Division Pterophyta (i.e.ferns and fern allies). Characterised by large and usually branched leaves (fronds); herbaceous and terrestrial to aquatic; spores in sporangia on the undersides of leaves. Tree ferns are classified with woody plants as they have the same vegetation structure.</description>
         </term>
-        <term> {g1.0}
-          <description>Description TBD</description>
+        <term> {g0.0}
+          <description/>
+          <term> {g1.0}
+            <description>Member of the family Poaceae.</description>
+          </term>
           <term> {g2.0}
-            <description>Description TBD</description>
+            <description>Coarse xeromorphic grass with a mound-like form often dead in the middle; genera are Triodia, Plectrachne and Zygochloa</description>
           </term>
           <term> {g3.0}
-            <description>Description TBD</description>
+            <description>Grasses forming discrete but open tufts usually with distinct individual shoots. These include the common agricultural grasses.</description>
           </term>
           <term> {g4.0}
-            <description>Description TBD</description>
+            <description>Member of the Poaceae planted or cultivated for specific human uses (e.g. human or other animal food, lawn or other ground cover)</description>
           </term>
           <term> {g5.0}
-            <description>Description TBD</description>
+            <description>Herbaceous, usually perennial, erect plant generally with a tufted habit and of the families Cyperaceae (true sedges) or Restionaceae (node sedges). </description>
           </term>
           <term> {g6.0}
-            <description>Description TBD</description>
+            <description>Herbaceous, usually perennial, erect monocot that is neither a grass nor a sedge. According to the ASLSFH, rushes include the monocotyledon families Juncaceae, Typhaceae, Liliaceae, Iridaceae, Xyridacea and the genus Lomandra, i.e. 'graminoid' or grass-like genera.</description>
           </term>
         </term>
-        <term> {h1.0}
-          <description>Description TBD</description>
+        <term> {h0.0}
+          <description/>
+          <term> {h1.0}
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Forbs are non-graminoid herbaceous plants, ie. a flowering plant that is not a grass, that have a non-woody stem. Compare with 'Herb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegetation.</description>
+          </term>
           <term> {h2.0}
-            <description>Description TBD</description>
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Herbs have a slightly woody stem. Compare with 'Forb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegeation.</description>
             <term> {h2.1}
-              <description>Description TBD</description>
+              <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Planted/cultivated annual or perennial herbaceous plant (monocotyledon or dicotyledon, non-woody stem); includes those cultivated for food or non-food purposes.</description>
             </term>
           </term>
         </term>
-        <term> {l1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {m1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {v1.0}
-          <description>Description TBD</description>
-        </term>
-        <term> {w1.0}
-          <description>Description TBD</description>
-          <term> {w1.1}
-            <description>Description TBD</description>
+        <term> {lm0.0}
+          <description/>
+          <term> {l1.0}
+            <description>Composite plant consisting of a fungus living symbiotically with algae or cyanobacteria; without true roots, stems or leaves</description>
           </term>
-          <term> {w1.2}
-            <description>Description TBD</description>
+          <term> {m1.0}
+            <description>A member of the Division Bryophyta (i.e. mosses and liverworts). Mosses are small plants usually with a slender leaf-bearing stem with no true vascular tissue. Liverwort often appear moss-like or consist of a flat, ribbon-like, green thallus. </description>
           </term>
         </term>
-        <term> {w2.0}
-          <description>Description TBD</description>
-          <term> {w2.1}
-            <description>Description TBD</description>
+        <term> {w0.0}
+          <description/>
+          <term> {w1.0}
+            <description>Woody plant more than 2 m tall usually with a single stem, or branches well above the base; not always distinguishable from large shrubs.</description>
+            <term> {w1.1}
+              <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
+            </term>
+            <term> {w1.2}
+              <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
+            </term>
+          </term>
+          <term> {w2.0}
+            <description>Plants with woody tissues. For the purposes of vegetation classification here, also those plants that achieve a growth form similar to that of woody plants (e.g. cycads, palms, tree ferns). Includes both trees and shrubs.</description>
+            <term> {w2.1}
+              <description>Any of the eucalypt trees or shrubs with multiple stems arising from a lignotuber.</description>
+            </term>
           </term>
         </term>
-        <term> {w3.0}
-          <description>Description TBD</description>
+        <term> {v0.0}
+          <description/>
+          <term> {v1.0}
+            <description>Climbing, twining, winding or sprawling plants usually with a woody stem.</description>
+          </term>
+          <term> {w3.0}
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
+          </term>
           <term> {w3.1}
-            <description>Description TBD</description>
+            <description>Shrub usually less than 2 m tall, commonly with ericoid leaves (nanophyll, less than 225 mm2). Often a member of one of the following families: Epacridaceae, Myrtaceae, Fabaceae and Proteaceae. Commonly occur on nutrient-poor substrates.</description>
           </term>
           <term> {w3.2}
-            <description>Description TBD</description>
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
           </term>
           <term> {w3.3}
-            <description>Description TBD</description>
+            <description>Woody plant, multi-stemmed at the base (or within about 200 mm from ground level), or, if single-stemmed, less than about 5 m tall; not always readily distinguishable from small trees. Includes chenopod scrub.</description>
           </term>
           <term> {w3.4}
-            <description>Description TBD</description>
+            <description>Shrubs planted in rows for the production of food crops.</description>
           </term>
         </term>
       </lookup>

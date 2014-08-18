@@ -80,6 +80,7 @@
               <Number_of_Walkers/>
               <Participants/>
               <Landform_Pattern/>
+              <Landform_Element/>
               <Landform_Notes/>
               <Vegetation_Structure_Upper/>
               <Vegetation_Structure_Mid_stratum/>
@@ -318,6 +319,13 @@
         </input>
         <select1 ref="Landform_Pattern" faims_attribute_name="Landform pattern" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Landform_Pattern}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <select1 ref="Landform_Element" faims_attribute_name="Landform element" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Landform_Element}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
