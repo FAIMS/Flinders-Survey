@@ -1,0 +1,226 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>hdb FAIMS Community Server</h:title>
+    <model>
+      <instance>
+        <faims id="hdb_FAIMS_Community_Server">
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <user>
+            <usertab>
+              <Area_Code/>
+              <users/>
+              <login/>
+            </usertab>
+          </user>
+          <Survey_Unit>
+            <Survey_Unit>
+              <Survey_Unit_ID/>
+              <Timestamp/>
+              <Device_ID/>
+              <Total_Transect_Width/>
+              <Number_of_Walkers/>
+              <Participants/>
+              <Landscape_Pattern/>
+              <Landform_Notes/>
+              <Vegetation_Structure_Upper/>
+              <Vegetation_Structure_Mid_stratum/>
+              <Vegetation_Structure_Ground_stratum/>
+              <Vegetation_Notes/>
+              <Ground_Surface_Visibility/>
+              <Ground_Surface_Notes/>
+              <Photo/>
+              <Update/>
+              <Delete/>
+              <New_POI/>
+              <Finish_SUI/>
+            </Survey_Unit>
+          </Survey_Unit>
+          <POI>
+            <POI>
+              <POI_ID/>
+              <Feature_Type/>
+              <Notes/>
+              <Photo/>
+              <Timestamp/>
+              <Recorded_By/>
+              <Update/>
+              <Delete/>
+            </POI>
+          </POI>
+        </faims>
+      </instance>
+      <!-- Insert nodeset bindings here -->
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="Survey_Unit">
+      <label>{Survey_Unit, arch16n: Survey Unit}</label>
+      <group ref="Survey_Unit">
+        <label>{Survey_Unit}</label>
+        <input ref="Survey_Unit_ID" faims_attribute_name="Survey Unit ID" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+          <label>{Survey_Unit_ID}</label>
+        </input>
+        <input ref="Timestamp" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="true">
+          <label>{Timestamp}</label>
+        </input>
+        <select1 appearance="full" ref="Device_ID" faims_attribute_name="Device ID" faims_attribute_type="vocab" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+          <label>{Device_ID}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <input ref="Total_Transect_Width" faims_attribute_name="Total Transect Width (m)" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Total_Transect_Width}</label>
+        </input>
+        <input ref="Number_of_Walkers" faims_attribute_name="Number of Walkers" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Number_of_Walkers}</label>
+        </input>
+        <input ref="Participants" faims_attribute_name="Participants" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Participants}</label>
+        </input>
+        <select1 ref="Landscape_Pattern" faims_attribute_name="Landscape Pattern" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Landscape_Pattern}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <input ref="Landform_Notes" faims_attribute_name="Landform Notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+          <label>{Landform_Notes}</label>
+        </input>
+        <select1 ref="Vegetation_Structure_Upper" faims_attribute_name="Vegetation Structure–Upper" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Vegetation_Structure_Upper}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <select1 ref="Vegetation_Structure_Mid_stratum" faims_attribute_name="Vegetation Structure–Mid-stratum" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Vegetation_Structure_Mid_stratum}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <select1 ref="Vegetation_Structure_Ground_stratum" faims_attribute_name="Vegetation Structure–Ground stratum" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Vegetation_Structure_Ground_stratum}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <input ref="Vegetation_Notes" faims_attribute_name="Vegetation notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+          <label>{Vegetation_Notes}</label>
+        </input>
+        <select1 ref="Ground_Surface_Visibility" faims_attribute_name="Ground Surface Visibility" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+          <label>{Ground_Surface_Visibility}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <input ref="Ground_Surface_Notes" faims_attribute_name="Ground surface notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+          <label>{Ground_Surface_Notes}</label>
+        </input>
+        <select type="camera" faims_sync="true" ref="Photo" faims_attribute_name="Photo" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+          <label>{Photo}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select>
+        <trigger ref="Update">
+          <label>Save {Survey_Unit}</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>Delete {Survey_Unit}</label>
+        </trigger>
+        <trigger ref="New_POI">
+          <label>New {POI}</label>
+        </trigger>
+        <trigger ref="Finish_SUI">
+          <label>Finish  {Survey_Unit}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="POI">
+      <label>{POI, arch16n: Point of Interest}</label>
+      <group ref="POI">
+        <label>{POI}</label>
+        <input ref="POI_ID" faims_attribute_name="POI ID" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+          <label>{POI_ID}</label>
+        </input>
+        <select1 ref="Feature_Type" faims_attribute_name="Feature Type" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true">
+          <label>{Feature_Type}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <input ref="Notes" faims_attribute_name="Notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+          <label>{Notes}</label>
+        </input>
+        <select type="camera" faims_sync="true" ref="Photo" faims_attribute_name="Photo" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+          <label>{Photo}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select>
+        <input ref="Timestamp" faims_certainty="false" faims_annotation="false" faims_read_only="true">
+          <label>{Timestamp}</label>
+        </input>
+        <input ref="Recorded_By" faims_certainty="false" faims_annotation="false" faims_read_only="true">
+          <label>{Recorded_By}</label>
+        </input>
+        <trigger ref="Update">
+          <label>Save {POI}</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>Delete {POI}</label>
+        </trigger>
+      </group>
+    </group>
+  </h:body>
+</h:html>
+
+
+
+
+
+
+
+Vegetation_Notes=Vegetation notes
+Landform_Notes=Landform Notes
+POI_ID=Point of Interest ID
+Recorded_By=Recorded By
+Participants=Participants
+POI, arch16n: Point of Interest=Point of Interest, faimsarchenttype: POI
+Vegetation_Structure_Upper=Vegetation Structure–Upper
+Vegetation_Structure_Mid_stratum=Vegetation Structure–Mid-stratum
+Feature_Type=Feature Type
+Timestamp=Timestamp
+Survey_Unit=Survey Unit
+Ground_Surface_Notes=Ground surface notes
+Ground_Surface_Visibility=Ground Surface Visibility
+POI=Point of Interest
+Notes=Notes
+Landscape_Pattern=Landscape Element
+Survey_Unit_ID=Survey Unit ID
+Vegetation_Structure_Ground_stratum=Vegetation Structure–Ground stratum
+Total_Transect_Width=Total Transect Width (m)
+Survey_Unit, arch16n: Survey Unit=Survey Unit, faimsarchenttype: Survey Unit
+Photo=Photo
+Device_ID=Device ID
+Number_of_Walkers=Number of Walkers

@@ -71,6 +71,10 @@
               <SyncOn/>
               <SyncOff/>
             </Control>
+            <Performance>
+              <Number_of_Records/>
+              <Generate_Performance_Data/>
+            </Performance>
           </control>
           <Survey_Unit>
             <Survey_Unit>
@@ -128,6 +132,7 @@
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Ground_Surface_Notes" type="string"/>
       <bind nodeset="/faims/POI/POI/Notes" type="string"/>
       <bind nodeset="/faims/control/Search/Walker" type="decimal"/>
+      <bind nodeset="/faims/control/Performance/Number_of_Records" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -295,6 +300,15 @@
         </trigger>
         <trigger ref="SyncOff">
           <label>Sync Off</label>
+        </trigger>
+      </group>
+      <group ref="Performance">
+        <label>Performance</label>
+        <input ref="Number_of_Records" faims_certainty="false" faims_annotation="false">
+          <label>Number of Records to generate</label>
+        </input>
+        <trigger ref="Generate_Performance_Data">
+          <label>Generate Performance Data</label>
         </trigger>
       </group>
     </group>

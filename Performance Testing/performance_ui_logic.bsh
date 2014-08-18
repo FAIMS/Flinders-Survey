@@ -570,7 +570,7 @@ login(){
         fetchOne("REPLACE INTO localSettings(key, value) VALUES('Team', '"+getFieldValue("user/usertab/Team")+"');");
 
         teamCode = fetchOne("select vocabid, vocabname from vocabulary join localSettings on (value=vocabid) where key = 'Team' ").get(1);
-
+        setFieldValue("control/Performance/Number_of_Records", "1000");
 
     }
 
@@ -599,3 +599,20 @@ stopSync() {
 
 loadSurveyUnitAttributes();
 loadPOIAttributes();
+
+onEvent("control/Performance/Generate_Performance_Data", "delayclick", "generatePerformanceData()");
+
+generatePerformanceData() {
+    Integer number_of_records = Integer.parseInt(getFieldValue("control/Performance/Number_of_Records"));
+    for(int i = 1; i <= number_of_records; i++) {
+        List attributes = createAttributeList();
+        attributes.add(createEntityAttribute("Survey Unit ID", "" + i, null, null, null));
+        attributes.add(createEntityAttribute("Total Transect Width (m)", "" + (i*10), null, null, null));
+        saveArchEnt(null, "Survey Unit", null, attributes);
+    }
+    for(int i = 1; i <= number_of_records; i++) {
+        List attributes = createAttributeList();
+        attributes.add(createEntityAttribute("POI ID", "" + i, null, null, null));
+        saveArchEnt(null, "POI", null, attributes);
+    }
+}
