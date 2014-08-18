@@ -598,12 +598,12 @@
           <description/>
           <term> {w1.0}
             <description>Woody plant more than 2 m tall usually with a single stem, or branches well above the base; not always distinguishable from large shrubs.</description>
-            <term> {w1.1}
-              <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
-            </term>
-            <term> {w1.2}
-              <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
-            </term>
+          </term>
+          <term> {w1.1}
+            <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
+          </term>
+          <term> {w1.2}
+            <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
           </term>
           <term> {w2.0}
             <description>Plants with woody tissues. For the purposes of vegetation classification here, also those plants that achieve a growth form similar to that of woody plants (e.g. cycads, palms, tree ferns). Includes both trees and shrubs.</description>
@@ -693,9 +693,9 @@
           </term>
           <term> {h2.0}
             <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Herbs have a slightly woody stem. Compare with 'Forb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegeation.</description>
-            <term> {h2.1}
-              <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Planted/cultivated annual or perennial herbaceous plant (monocotyledon or dicotyledon, non-woody stem); includes those cultivated for food or non-food purposes.</description>
-            </term>
+          </term>
+          <term> {h2.1}
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Planted/cultivated annual or perennial herbaceous plant (monocotyledon or dicotyledon, non-woody stem); includes those cultivated for food or non-food purposes.</description>
           </term>
         </term>
         <term> {lm0.0}
@@ -711,18 +711,18 @@
           <description/>
           <term> {w1.0}
             <description>Woody plant more than 2 m tall usually with a single stem, or branches well above the base; not always distinguishable from large shrubs.</description>
-            <term> {w1.1}
-              <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
-            </term>
-            <term> {w1.2}
-              <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
-            </term>
+          </term>
+          <term> {w1.1}
+            <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
+          </term>
+          <term> {w1.2}
+            <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
           </term>
           <term> {w2.0}
             <description>Plants with woody tissues. For the purposes of vegetation classification here, also those plants that achieve a growth form similar to that of woody plants (e.g. cycads, palms, tree ferns). Includes both trees and shrubs.</description>
-            <term> {w2.1}
-              <description>Any of the eucalypt trees or shrubs with multiple stems arising from a lignotuber.</description>
-            </term>
+          </term>
+          <term> {w2.1}
+            <description>Any of the eucalypt trees or shrubs with multiple stems arising from a lignotuber.</description>
           </term>
         </term>
         <term> {v0.0}
@@ -806,9 +806,9 @@
           </term>
           <term> {h2.0}
             <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Herbs have a slightly woody stem. Compare with 'Forb'. Select top level category 'forbs and herbs' for mixed low non-grassy herbaceous vegeation.</description>
-            <term> {h2.1}
-              <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Planted/cultivated annual or perennial herbaceous plant (monocotyledon or dicotyledon, non-woody stem); includes those cultivated for food or non-food purposes.</description>
-            </term>
+          </term>
+          <term> {h2.1}
+            <description>Plant with leaves and stems that die down an on annual, biennial or perennial basis. Planted/cultivated annual or perennial herbaceous plant (monocotyledon or dicotyledon, non-woody stem); includes those cultivated for food or non-food purposes.</description>
           </term>
         </term>
         <term> {lm0.0}
@@ -824,18 +824,18 @@
           <description/>
           <term> {w1.0}
             <description>Woody plant more than 2 m tall usually with a single stem, or branches well above the base; not always distinguishable from large shrubs.</description>
-            <term> {w1.1}
-              <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
-            </term>
-            <term> {w1.2}
-              <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
-            </term>
+          </term>
+          <term> {w1.1}
+            <description>No widely accepted or universal definition for Australian rainforests. Usually distinguished by their dark green colour and species composition, which contrasts with the surrounding grey or reddish-green and often eucalypt-dominated vegetation.</description>
+          </term>
+          <term> {w1.2}
+            <description>Trees planted in mostly urban/suburban settings (e.g. gardens, along streets, and nurseries), or cultivated for food (e.g. orchards) or non-food purposes (e.g. forestry).</description>
           </term>
           <term> {w2.0}
             <description>Plants with woody tissues. For the purposes of vegetation classification here, also those plants that achieve a growth form similar to that of woody plants (e.g. cycads, palms, tree ferns). Includes both trees and shrubs.</description>
-            <term> {w2.1}
-              <description>Any of the eucalypt trees or shrubs with multiple stems arising from a lignotuber.</description>
-            </term>
+          </term>
+          <term> {w2.1}
+            <description>Any of the eucalypt trees or shrubs with multiple stems arising from a lignotuber.</description>
           </term>
         </term>
         <term> {v0.0}
