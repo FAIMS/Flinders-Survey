@@ -28,12 +28,24 @@
           </user>
           <control>
             <Search>
-              <TeamMember/>
-              <Walker/>
+              <container1>
+                <child1>
+                  <TeamMember/>
+                </child1>
+                <child2>
+                  <Walker/>
+                </child2>
+              </container1>
               <newSurveyUnit/>
               <newPOI/>
-              <listOfLastText/>
-              <archentsRadio/>
+              <container2>
+                <child1>
+                  <listOfLastText/>
+                </child1>
+                <child2>
+                  <archentsRadio/>
+                </child2>
+              </container2>
               <listOfLast/>
             </Search>
             <Map>
@@ -127,7 +139,8 @@
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Vegetation_Notes" type="string"/>
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Ground_Surface_Notes" type="string"/>
       <bind nodeset="/faims/POI/POI/Notes" type="string"/>
-      <bind nodeset="/faims/control/Search/Walker" type="decimal"/>
+      <bind nodeset="/faims/control/Search/container1/child2/Walker" type="decimal"/>
+      <bind nodeset="/faims/control/Search/container2/child1/listOfLastText" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -180,32 +193,50 @@
       <label>Control</label>
       <group ref="Search" faims_scrollable="false">
         <label>Search</label>
-        <input faims_certainty="false" faims_read_only="false" ref="TeamMember">
-          <label>{Participants}</label>
-        </input>
-        <input faims_certainty="false" faims_read_only="false" ref="Walker">
-          <label>Number of Walkers</label>
-        </input>
-        <trigger ref="newSurveyUnit">
+        <group faims_style="orientation" ref="container1">
+          <label/>
+          <group faims_style="even" ref="child1">
+            <label/>
+            <input faims_certainty="false" faims_read_only="false" ref="TeamMember">
+              <label>{Participants}</label>
+            </input>
+          </group>
+          <group faims_style="leftBigger" ref="child2">
+            <label/>
+            <input faims_certainty="false" faims_read_only="false" ref="Walker">
+              <label>Number of Walkers</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="newSurveyUnit" faims_style_class="faims-blue">
           <label>New {Survey_Unit}</label>
         </trigger>
-        <trigger ref="newPOI">
+        <trigger ref="newPOI" faims_style_class="faims-blue">
           <label>New {POI}</label>
         </trigger>
-        <input faims_certainty="false" faims_read_only="false" ref="listOfLastText">
-          <label>How many records would you like to see?</label>
-        </input>
-        <select1 ref="archentsRadio" faims_annotation="false" faims_certainty="false">
+        <group faims_style="orientation" ref="container2">
+          <label/>
+          <group faims_style="even" ref="child1">
             <label/>
-            <item>
-              <label>{Survey_Unit}</label>
-              <value>Survey Unit</value>
-            </item>
-            <item>
-              <label>{POI}</label>
-              <value>POI</value>
-            </item>
-        </select1>
+            <input faims_certainty="false" faims_read_only="false" ref="listOfLastText">
+              <label>How many records would you like to see?</label>
+            </input>
+          </group>
+          <group faims_style="even" ref="child2">
+            <label/>
+            <select1 ref="archentsRadio" faims_annotation="false" faims_certainty="false">
+              <label/>
+              <item>
+                <label>{Survey_Unit}</label>
+                <value>Survey Unit</value>
+              </item>
+              <item>
+                <label>{POI}</label>
+                <value>POI</value>
+              </item>
+            </select1>
+          </group>
+        </group>        
         <select1 appearance="compact" ref="listOfLast" faims_annotation="false" faims_certainty="false">
             <label/>
             <item>
@@ -302,10 +333,10 @@
       <label>{Survey_Unit}</label>
       <group ref="Survey_Unit">
         <label>{Survey_Unit}</label>
-        <input ref="Survey_Unit_ID" faims_attribute_name="Survey Unit ID" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+        <input ref="Survey_Unit_ID" faims_attribute_name="Survey Unit ID" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="false" faims_style_class="required">
           <label>{Survey_Unit_ID}</label>
         </input>
-        <input ref="Timestamp" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="true">
+        <input ref="Timestamp" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="true">
           <label>{Timestamp}</label>
         </input>
         <input ref="Total_Transect_Width" faims_attribute_name="Total Transect Width (m)" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
@@ -314,7 +345,7 @@
         <input ref="Number_of_Walkers" faims_attribute_name="Number of Walkers" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Number_of_Walkers}</label>
         </input>
-        <input ref="Participants" faims_attribute_name="Participants" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="true" faims_read_only="false">
+        <input ref="Participants" faims_attribute_name="Participants" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Participants}</label>
         </input>
         <select1 ref="Landform_Pattern" faims_attribute_name="Landform pattern" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
@@ -331,7 +362,7 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <input ref="Landform_Notes" faims_attribute_name="Landform Notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+        <input ref="Landform_Notes" faims_attribute_name="Landform notes" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Landform_Notes}</label>
         </input>
         <select1 ref="Vegetation_Structure_Upper" faims_attribute_name="Vegetation Structure–Upper" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
@@ -355,7 +386,7 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <input ref="Vegetation_Notes" faims_attribute_name="Vegetation notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+        <input ref="Vegetation_Notes" faims_attribute_name="Vegetation notes" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Vegetation_Notes}</label>
         </input>
         <select1 ref="Ground_Surface_Visibility" faims_attribute_name="Ground surface visibility" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true" faims_read_only="false">
@@ -365,32 +396,32 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <input ref="Ground_Surface_Notes" faims_attribute_name="Ground surface notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+        <input ref="Ground_Surface_Notes" faims_attribute_name="Ground surface notes" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Ground_Surface_Notes}</label>
         </input>
-        <select type="camera" faims_sync="true" ref="Photos" faims_attribute_name="Photo" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+        <select type="camera" faims_sync="true" ref="Photos" faims_attribute_name="Photo" faims_attribute_type="measure" faims_certainty="false" faims_annotation="true" faims_read_only="false">
           <label>{Photos}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select>
-        <trigger ref="Attach_Photo">
+        <trigger ref="Attach_Photo" faims_style_class="faims-success">
           <label>{Attach_Photo}</label>
         </trigger>
-        <trigger ref="Update">
+        <!-- <trigger ref="Update">
           <label>Save {Survey_Unit}</label>
         </trigger>
         <trigger ref="Delete">
           <label>Delete {Survey_Unit}</label>
-        </trigger>
-        <trigger ref="New_POI">
+        </trigger> -->
+        <trigger ref="New_POI" faims_style_class="faims-blue">
           <label>Save and New {POI}</label>
         </trigger>
-        <trigger ref="Finish_SUI">
+        <trigger ref="Finish_SUI" faims_style_class="faims-success">
           <label>Finish {Survey_Unit}</label>
         </trigger>
-        <input faims_certainty="false" faims_read_only="true" ref="trackStatus">
+        <input faims_certainty="false" faims_annotation="false" faims_read_only="true" ref="trackStatus">
           <label>Track Log Status</label>
         </input>
       </group>
@@ -409,7 +440,7 @@
       <label>{POI}</label>
       <group ref="POI">
         <label>{POI}</label>
-        <input ref="POI_ID" faims_attribute_name="POI ID" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+        <input ref="POI_ID" faims_attribute_name="POI ID" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="false" faims_style_class="required">
           <label>{POI_ID}</label>
         </input>
         <select1 ref="Feature_Type" faims_attribute_name="Feature Type" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true">
@@ -419,17 +450,17 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <input ref="Notes" faims_attribute_name="Notes" faims_attribute_type="freetext" faims_certainty="true" faims_annotation="false" faims_read_only="false">
+        <input ref="Notes" faims_attribute_name="Notes" faims_attribute_type="measure" faims_certainty="true" faims_annotation="false" faims_read_only="false">
           <label>{Notes}</label>
         </input>
-        <select type="camera" faims_sync="true" ref="Photos" faims_attribute_name="Photo" faims_attribute_type="freetext" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+        <select type="camera" faims_sync="true" ref="Photos" faims_attribute_name="Photo" faims_attribute_type="measure" faims_certainty="false" faims_annotation="true" faims_read_only="false">
           <label>{Photos}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select>
-        <trigger ref="Attach_Photo">
+        <trigger ref="Attach_Photo" faims_style_class="faims-success">
           <label>{Attach_Photo}</label>
         </trigger>
         <group faims_style="orientation" ref="container1">
@@ -447,12 +478,12 @@
             </input>
           </group>
         </group>
-        <trigger ref="Update">
+        <!-- <trigger ref="Update">
           <label>Save {POI}</label>
         </trigger>
         <trigger ref="Delete">
           <label>Delete {POI}</label>
-        </trigger>
+        </trigger> -->
       </group>
     </group>
   </h:body>

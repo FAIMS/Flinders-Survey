@@ -20,7 +20,7 @@
         <term> {Landscape}
           <description>Description TBD</description>
         </term>
-        <term> {zOther}
+        <term> {Other}
           <description>Description TBD</description>
         </term>
       </lookup>
@@ -28,7 +28,7 @@
     <property name="Notes" type="freetext">
       <description>Description TBD</description>
     </property>
-    <property name="Photo" type="file">
+    <property name="Photo" type="file" file="true" thumbnail="true">
       <description>Description TBD</description>
     </property>
   </ArchaeologicalElement>
@@ -122,10 +122,10 @@
     <property name="Landform pattern" type="enum">
       <description>A combination of relief, slope, stream channel occurance and mode of geomorphological activity within the of the survey unit. What landform pattern comprises the majority (>50%) of the survey unit? Minimum size of a landform pattern is circle 300 m in diameter circle with you at the centre. If a landform pattern that is greater in size is encountered, create a new survey unit.</description>
       <lookup>
-        <term>{0No_Observation}
+        <term>{No_Observation}
           <description/>
         </term>
-        <term> {aAlluvium_and_floodplains}
+        <term> {Alluvium_and_floodplains}
           <description/>
           <term> {ALF}
             <description>Level (less than 1% slope) to very gently inclined, complex landform pattern of extremely low relief. The rapidly migrating alluvial stream channels are shallow to moderately deep, locally numerous, but elsewhere widely spaced. The channels form a centrifugal to divergent, integrated, reticulated to distributary pattern. The landform pattern includes areas that are bar plains, being aggraded or eroded by frequently active channelled stream flow, and other areas comprising terraces or stagnant alluvial plains with slopes that are greater than usual, formed by channelled stream flow but now relict. Incision in the upslope area may give rise to an erosional stream bed between scarps. Typical elements: stream bed, bar, plain. Compare with Sheet-flood fan and Pediment</description>
@@ -148,9 +148,6 @@
           <term> {FLO}
             <description>Alluvial plain characterised by frequently active erosion and aggradation by channelled or overbank stream flow. Unless otherwise specified, 'frequently active' is to mean that flow has an Average Recurrence Interval of 50 years or less. Typical elements: stream channel (stream bed and bank), plain (dominant). Common elements: bar, scroll, levee, backplain, swamp. Occasional elements: ox-bow, flood-out, scroll. Included types of landform pattern are: bar plain, meander plain, covered plain, anastomotic plain. Related relict landform patterns are: stagnant alluvial plain, terrace, terraced land (partly relict).</description>
           </term>
-          <term> {SAN}
-            <description>Level to gently undulating landform pattern of extremely low relief and without channels; formed possibly by sheet flow or stream flow, but now relict and modified by wind action. Typical element: plain. Occasional elements: dune, playa, lunette.</description>
-          </term>
           <term> {SHF}
             <description>Level (less than 1% slope) to very gently inclined landform pattern of extremely low relief with numerous rapidly migrating, very shallow incipient stream channels forming a divergent to unidirectional, integrated or interrupted reticulated pattern. The pattern is aggraded by frequently active sheet flow and channelled stream flow, with subordinate wind erosion. Typical elements: plain, stream bed. Compare with Alluvial fan and Pediment.</description>
           </term>
@@ -164,7 +161,7 @@
             <description>Landform pattern including one or more terraces and often a flood plain. Relief is low or very low (9-90 m). Terrace plains or terrace flats occur at stated heights above the top of the stream bank. Typical elements: terrace plains, terrace flats, scarps, scroll plain, stream channel. Occasional elements: stream channel, scroll, levee.</description>
           </term>
         </term>
-        <term> {bRises_and_hills}
+        <term> {Rises_and_hills}
           <description/>
           <term> {BAD}
             <description>Landform pattern of low to extremely low relief (less than 90 m) and steep to precipitous slopes, typically with numerous fixed, erosional stream channels which form a non-directional, integrated tributary network. There is continuously active erosion by collapse, landslide, sheet flow, creep and channelled stream flow. Typical elements: ridge (dominant), stream bed or gully. Occasional elements: summit surface, hillcrest, hillslope, talus. Compare with Mountains, Hills, Low hills, Rises and Plain</description>
@@ -185,7 +182,7 @@
             <description>Landform pattern of very low relief (9-30 m) and very gentle to steep slopes. The fixed, erosional stream channels are closely to very widely spaced and form a non-directional to convergent, integrated or interrupted tributary pattern. The pattern is eroded by continuously active to barely active creep and sheet flow. Typical elements: hillcrest, hillslope (dominant), footslope, drainage depression, riseslope. Common elements: valley flat, stream channel. Occasional elements: gully, fan, tor. Compare with Mountains, Hills, Low hills and Plain.</description>
           </term>
         </term>
-        <term> {cCoastal_and_marine}
+        <term> {Coastal_and_marine}
           <description/>
           <term> {BEA}
             <description>Level to gently undulating landform pattern of extremely low relief on which stream channels are absent or very rare; it consists of relict, parallel beach ridges. Typical elements: beach ridge (co-dominant), swale  (co-dominant). Common elements: beach, foredune, tidal creek. Compare with Chenier plain.</description>
@@ -203,7 +200,7 @@
             <description>Level landform pattern with extremely low relief and slowly migrating, deep alluvial stream channels, which form non-directional, integrated tributary patterns; it is aggraded by frequently active tides. Typical elements: plain (dominant), intertidal flat, supratidal flat, stream channel. Occasional elements: lagoon, dune, beach ridge, beach.</description>
           </term>
         </term>
-        <term> {dWindborne_landscapes}
+        <term> {Windborne_landscapes}
           <description/>
           <term> {DUN}
             <description>Level to rolling landform pattern of very low or extremely low relief  without stream channels, built up or locally excavated, eroded or aggraded by wind. Typical elements: dune or dunecrest, duneslope, swale, blow-out, risecrest, residual rise, riseslope. Common elements: hummocky dune, barchan dune, parabolic dune, linear dune. Included types of landform pattern are: longitudinal dunefield, parabolic dunefield</description>
@@ -215,7 +212,7 @@
             <description>Fixed, erosional stream channels that are closely to very widely spaced and form a non-directional or diverging, integrated tributary network. There is continuously active erosion by collapse, landslide, sheet flow, creep, and channelled stream flow. Typical elements: hillcrest, hillslope (dominant), stream bed. Common elements: talus, landslide, alcove, valley flat, scarp. Occasional elements: cirque, footslope. Compare with Hills, Low hills, Rises and Plain.</description>
           </term>
         </term>
-        <term> {eLow_relief_plains}
+        <term> {Low_relief_plains}
           <description/>
           <term> {LAC}
             <description>Level landform pattern with extremely low relief formerly occupied by a lake but now partly or completely dry. It is relict after aggradation by waves and by deposition of material from suspension and solution in standing water. The pattern is usually bounded by wave-formed features such as cliffs, rock platforms, beaches, berms and lunettes. These may be included or excluded. Typical element: plain. Common elements: beach, cliff. Occasional elements: rock platform, berm. Compare with Playa plain.</description>
@@ -238,14 +235,17 @@
           <term> {PLY}
             <description>Level landform pattern with extremely low relief, typically without stream channels, aggraded by rarely active sheet flow and modified by wind, waves, and soil phenomena. Typical elements: playa, lunette, plain. Compare with Lacustrine plain.</description>
           </term>
+          <term> {SAN}
+            <description>Level to gently undulating landform pattern of extremely low relief and without channels; formed possibly by sheet flow or stream flow, but now relict and modified by wind action. Typical element: plain. Occasional elements: dune, playa, lunette.</description>
+          </term>
         </term>
-        <term> {fAnthopogenic}
+        <term> {Anthropogenic}
           <description/>
           <term> {MAD}
             <description>Landform pattern typically of very low or extremely low relief and with slopes either level or very steep. Sparse, fixed, deep, artificial stream channels form a non-directional, interrupted tributary pattern. The landform pattern is eroded and aggraded, and locally built up or excavated, by rarely active human agency. Typical elements: fill-top (dominant), cut-over surface, cut face, embankment, berm, trench. Common elements: mound, pit, dam</description>
           </term>
         </term>
-        <term> {gHigh_relief}
+        <term> {High_relief}
           <description/>
           <term> {MOU}
             <description>Landform pattern of very high relief (greater than 300 m) with moderate to precipitous slopes and fixed, erosional stream channels that are closely to very widely spaced and form a non-directional or diverging, integrated tributary network. There is continuously active erosion by collapse, landslide, sheet flow, creep, and channelled stream flow. Typical elements: hillcrest, hillslope (dominant), stream bed. Common elements: talus, landslide, alcove, valley flat, scarp. Occasional elements: cirque, footslope. Compare with Hills, Low hills, Rises and Plain</description>
@@ -256,10 +256,10 @@
     <property name="Landform element" type="enum">
       <description></description>
       <lookup>
-        <term>{0No_Observation}
+        <term>{No_Observation}
           <description/>
         </term>
-        <term> {aEroded_depressed_or_deflated_elements}
+        <term> {Eroded_depressed_or_deflated_elements}
           <description/>
           <term> {ALC}
             <description>Moderately inclined to very steep, short open depression with concave cross-section, eroded by collapse, landslides, creep or surface wash.</description>
@@ -283,7 +283,7 @@
             <description>Large, shallow, level-floored closed depression, intermittently water-filled, but mainly dry due to evaporation, bounded as a rule by flats aggraded by sheet flow and channelled stream flow.</description>
           </term>
         </term>
-        <term> {bStream_and_floodplain_elements}
+        <term> {Stream_and_floodplain_elements}
           <description/>
           <term> {BKP}
             <description>Large flat resulting from aggradation by overbank stream flow at some distance from the stream channel and in some cases biological (peat) accumulation; often characterised by a high watertable and the presence of swamps or lakes; part of a covered plain landform pattern.</description>
@@ -331,7 +331,7 @@
             <description>Large or very large flat aggraded by channelled or overbank stream flow, standing above a scarp and no longer frequently inundated; part of a former flood plain. </description>
           </term>
         </term>
-        <term> {cDune_and_swale_elements}
+        <term> {Dune_and_swale_elements}
           <description/>
           <term> {DUB}
             <description>A crescent-shaped dune with tips extending leeward (downwind), making this side concave and the windward (upwind) side convex. Barchan dunes tend to be arranged in chains extending in the dominant wind direction.</description>
@@ -364,7 +364,7 @@
             <description>(i) linear, level-floored open depression excavated by wind, or left relict between ridges built up by wind or waves, or built up to a lesser height than them. (ii) long, curved open or closed depression left relict between scrolls built up by channelled stream flow.</description>
           </term>
         </term>
-        <term> {dCoastal_and_estuarine_elements}
+        <term> {Coastal_and_estuarine_elements}
           <description/>
           <term> {BEA}
             <description>Short, low, very wide slope, gently or moderately inclined, built up or eroded by waves, forming the shore of a lake or sea </description>
@@ -382,7 +382,7 @@
             <description>Flat built up to sea level by marine organisms.</description>
           </term>
         </term>
-        <term> {eHill_and_rise_elements}
+        <term> {Hill_and_rise_elements}
           <description/>
           <term> {BEN}
             <description>Short, gently or very gently inclined minimal mid-slope element eroded or aggraded by any agent.</description>
@@ -412,7 +412,7 @@
             <description>Hillock heaved up by volcanism. In other settings, built up by human activity at a burial site.</description>
           </term>
         </term>
-        <term> {fAnthropogenic_elements}
+        <term> {Anthropogenic_elements}
           <description/>
           <term> {BEH}
             <description>(i) short, very gently inclined to level minimal mid-slope in an embankment or cut face, eroded or aggraded by human activity.</description>
@@ -442,7 +442,7 @@
             <description>Open depression excavated by human activity</description>
           </term>
         </term>
-        <term> {gCliff_and_scarp_elements}
+        <term> {Cliff_and_scarp_elements}
           <description/>
           <term> {BRK}
             <description>Steep maximal mid-slope or upper slope, generally comprising both a very short scarp (free face) that is often bare rockland, and a stony scarp-footslope (debris slope); often standing above a pediment.</description>
@@ -469,7 +469,7 @@
             <description>Moderately inclined or steep waning lower slope, consisting of rock fragments aggraded by gravity.</description>
           </term>
         </term>
-        <term> {hPlain_and_gully_elements}
+        <term> {Plain_and_gully_elements}
           <description/>
           <term> {GUL}
             <description>Open depression with short, precipitous walls and moderately inclined to very gently inclined floor or small stream channel, eroded by channelled stream flow and consequent collapse and water-aided mass movement.</description>
@@ -478,7 +478,7 @@
             <description>Small, gently inclined to level flat, aggraded or sometimes eroded by channelled or overbank  stream flow, typically enclosed by hillslopes; a miniature alluvial plain landform pattern</description>
           </term>
         </term>
-        <term> {iFresh_water_elements}
+        <term> {Fresh_water_elements}
           <description/>
           <term> {LAG}
             <description>Closed depression filled with water that is typically salt or brackish, bounded at least in part by forms aggraded or built up by waves or reef-building organisms.</description>
@@ -490,7 +490,7 @@
             <description>almost level, closed or almost closed depression with a seasonal or permanent watertable at or above the surface, commonly aggraded by overbank stream flow and sometimes biological (peat) accumulation</description>
           </term>
         </term>
-        <term> {jRock_and_scald_elements}
+        <term> {Rock_and_scald_elements}
           <description/>
           <term> {RFL}
             <description>Flat of bare consolidated rock, ususally eroded by sheet wash</description>
@@ -505,7 +505,7 @@
             <description>Steep to precipitous hillock, typically convex, with a surface mainly of bare rock, either coherent or comprising subangular to rounded, large boulders (exhumed core-stones, also themselves called tors) separated by open fissures; eroded by sheet wash or water-aided mass movement.</description>
           </term>
         </term>
-        <term> {kEstuarine_and_tidal_elements}
+        <term> {Estuarine_and_tidal_elements}
           <description/>
           <term> {TDC}
             <description>Intermittently water-filled open depression in parts eroded, excavated, built up and aggraded by channelled tide-water flow; type of stream channel characterised by a rapid increase in width downstream.</description>
@@ -525,7 +525,7 @@
     <property name="Vegetation Structure–Upper" type="enum">
       <description>Categories based on the growth form, height and cover within the survey unit. Describe the vegetation structure for the dominant or tallest stratum, if present. What is the vegetation structure that comprises the majority (>50%) of the survey unit?</description>
       <lookup>
-        <term>{0No_Observation}
+        <term>{No_Observation}
           <description/>
         </term>
         <term>{a0.0}
@@ -644,7 +644,7 @@
     <property name="Vegetation Structure–Mid-stratum" type="enum">
       <description>Describe the vegetation structure for the mid-stratum, if present. What is the vegetation structure that comprises the majority (>50%) of the survey unit?</description>
       <lookup>
-        <term>{0No_Observation}
+        <term>{No_Observation}
           <description/>
         </term>
         <term>{a0.0}
@@ -763,7 +763,7 @@
     <property name="Vegetation Structure–Ground stratum" type="enum">
       <description>Describe the vegetation structure for the ground-stratum, if present. What is the vegetation structure that comprises the majority (greater than 50%) of the survey unit? Usually less than 2.0 m in height.</description>
       <lookup>
-        <term>{0No_Observation}
+        <term>{No_Observation}
           <description/>
         </term>
         <term>{a0.0}
@@ -885,7 +885,7 @@
     <property name="Ground surface visibility" type="enum">
       <description/>
       <lookup>
-        <term>{0No_Observation}
+        <term>{No_Observation}
           <description/>
         </term>
         <term> {Heavy}
@@ -905,7 +905,7 @@
     <property name="Ground surface notes" type="freetext">
       <description>Describe any factors or issues affecting ground cover</description>
     </property>
-    <property name="Photo" type="file">
+    <property name="Photo" type="file" file="true" thumbnail="true">
       <description>Take a photo that best represents the survey unit.</description>
     </property>
   </ArchaeologicalElement>
