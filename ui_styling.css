@@ -57,6 +57,10 @@
     margin-left:5%;
 }
 
+.track-status {
+    height: 150px;
+}
+
 .all {
     margin-left: 5%;
     padding-left: 2%;

@@ -67,7 +67,13 @@ addActionBarItem("external_gps", new ToggleActionButtonCallback() {
             stopGPS();
         }
         startExternalGPS();
-        showToast("GPS refresh rate set to " + getFieldValue("control/Control/refreshText") + ". You can change it in the Control tab");
+        if(isBluetoothConnected()) {
+            showToast("GPS refresh rate set to " + getFieldValue("control/Control/refreshText") + ". You can change it in the Control tab");
+        } else {
+            showToast("Please enable bluetooth.");
+            this.isActionOff();
+        }
+        
     }
 });
 
@@ -86,8 +92,14 @@ addActionBarItem("time_tracklog", new ToggleActionButtonCallback() {
         "Time Tracklog disabled";
     }
     actionOff() {
-        startTimeTrack();
-        showToast("Tracklog time interval set to " + getFieldValue("control/Control/tracktimeText") + " seconds. You can change it in the Control tab");
+        if(isInternalGPSOn() || isInternalGPSOn()) {
+            startTimeTrack();
+            showToast("Tracklog time interval set to " + getFieldValue("control/Control/tracktimeText") + " seconds. You can change it in the Control tab");    
+        } else {
+            showToast("GPS is not turned on.");
+            this.isActionOff();
+        }
+        
     }
 });
 
@@ -106,8 +118,13 @@ addActionBarItem("distance_tracklog", new ToggleActionButtonCallback() {
         "Distance Tracklog disabled";
     }
     actionOff() {
-        startDistTrack();
+        if(isInternalGPSOn() || isInternalGPSOn()) {
+            startDistTrack();
         showToast("Tracklog distance interval set to " + getFieldValue("control/Control/trackdistText") + " metres. You can change it in the Control tab");
+        } else {
+            showToast("GPS is not turned on.");
+            this.isActionOff();
+        }
     }
 });
 
@@ -126,9 +143,7 @@ onEvent("control/Search/newPOI", "delayclick", "newPOI()");
 
 onEvent("control/Search/archentsRadio", "select", "showRecords();");
 
-
-onEvent("control/Search", "load", "setFieldValue(\"control/Search/listOfLastText\",\"5\");setFieldValue(\"control/Search/archentsRadio\",\"Survey Unit\");showRecords()");
-onEvent("control/Search", "show", "showRecords();");
+onEvent("control/Search", "show", "showRecords();showControl();");
 
 onEvent("control/Search/listOfLast", "click", "loadRecord()");
 
@@ -137,10 +152,19 @@ resetGlobals() {
     removeNavigationButton("delete");
 }
 
+showControlTab = 0;
+
+showControl(){
+    if (showControlTab < 2){
+        showTab("control/Control");
+        showControlTab++;
+    }
+}
+
 showRecords(){
     if(isNull(getFieldValue("control/Search/listOfLastText"))) setFieldValue("control/Search/listOfLastText", "5");
     type = getFieldValue("control/Search/archentsRadio");
-    fetchAll("select uuid, response from identifierAsSpreadsheet join latestnondeletedArchEnt using (uuid) join aenttype using (aenttypeid) where aenttypename like '%"+type+"%' order by aenttimestamp desc limit "+getFieldValue("control/Search/listOfLastText")+";",
+    fetchAll("select uuid, response from identifierAsSpreadsheet join latestnondeletedArchEnt using (uuid) join aenttype using (aenttypeid) where aenttypename like '%"+type+"%' order by aenttimestamp desc limit "+getFieldValue("control/Search/listOfLastText")+"+1;",
         new FetchCallback() {
             onFetch(result) {
                 if (!isNull(result)){
@@ -171,6 +195,8 @@ loadRecord(){
 setFieldValue("control/Control/refreshText","60");
 
 onEvent("control/Control/refreshGPSButton", "click", "startGPS()");
+onEvent("control/Control/stopGPS", "click", "stopGPSLogic()");
+
 //onEvent("control/Control/refreshButton", "click", "setGPSUpdateInterval("+getFieldValue("control/Control/refreshText")+")");
 
 startGPS(){
@@ -180,8 +206,25 @@ startGPS(){
         return;
     }
     setGPSUpdateInterval(Integer.parseInt(getFieldValue("control/Control/refreshText")));
-    if(intext.equals("I")) startInternalGPS();
-    if(intext.equals("E")) startExternalGPS();
+    showToast("GPS enabled.");
+    if(intext.equals("I")) { 
+        if(isExternalGPSOn()) stopGPS();
+        startInternalGPS();
+    }
+    if(intext.equals("E")) {
+        if(isInternalGPSOn()) stopGPS();
+        startExternalGPS();
+    }
+}
+
+stopGPSLogic() {
+    if(isInternalGPSOn() || isExternalGPSOn()) {
+        showToast("GPS disabled.");
+        stopGPS();    
+    } else {
+        showToast("GPS is not turned on.");
+    }
+    
 }
 
 //Tracklog
@@ -280,10 +323,11 @@ saveGPSTrack() {
                         numTransectPoints++;
                         attributes.add(createEntityAttribute("SUID", getFieldValue("Survey_Unit/Survey_Unit/Survey_Unit_ID"), null, null, null));
                         attributes.add(createEntityAttribute("Width", getFieldValue("Survey_Unit/Survey_Unit/Total_Transect_Width"), null, null, null));
-
                         if (!stateAppend.equals("")){
                             attributes.add(createEntityAttribute("State", stateAppend, null, null, null));
-
+                            if(stateAppend.equals("End")) {
+                                transectEnabled=false;
+                            }
                             stateAppend = "";
                         }
 
@@ -295,11 +339,10 @@ saveGPSTrack() {
                             onSave(uuid, newRecord) {
                                 transect_id = uuid;
                                 saveEntitiesToRel("TransectSUI", transect_id, survey_unit_id);
+                                updateTrackStatus();
                             }
                         });
                     }
-
-                    updateTrackStatus();
                 }
             });
         }
@@ -365,6 +408,7 @@ loadSurveyUnitFrom(archentid) {
                         setFieldValue("Survey_Unit/Survey_Unit/Timestamp", result.get(0));
                     }
                 });
+            updateTrackStatus();
             saveTabGroup("Survey_Unit", survey_unit_id, null, null, new SaveCallback() {
                 onSave(uuid, newRecord) {
                     survey_unit_id = uuid;
@@ -412,7 +456,6 @@ finishSurveyUnit(){
             survey_unit_id = uuid;
             stateAppend="End";
             saveGPSTrack();
-            transectEnabled=false;
             cancelTabGroup("Survey_Unit", false);
         }
     });
@@ -480,7 +523,6 @@ autoNumSurveyUnit() {
                             "where aenttypename = 'Survey Unit') " +
               "and attributename = 'Survey Unit ID');", new FetchCallback() {
         onFetch(result) {
-            print(result);
             if(isNull(result.get(0))) {
                 setFieldValue("Survey_Unit/Survey_Unit/Survey_Unit_ID", "1");
             } else {
@@ -779,17 +821,6 @@ populateListForUsers();
 
 String username = "";
 
-showControlTab = true;
-
-onEvent("control/Search", "show", "showControl()");
-
-showControl(){
-    if (showControlTab){
-        showTab("control/Control");
-        showControlTab = false;
-    }
-}
-
 login(){
     if(isNull(getFieldValue("user/usertab/Team")) || isNull(getFieldValue("user/usertab/users"))){
         showWarning("Warning", "Please select a User and an Team before logging in.");
@@ -808,7 +839,6 @@ login(){
                 }
             });
     }
-
 }
 
 onEvent("user/usertab/login", "click", "login()");

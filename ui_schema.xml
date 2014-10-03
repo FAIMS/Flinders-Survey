@@ -60,6 +60,7 @@
                 </child1>
                 <child2>
                   <refreshGPSButton/>
+                  <stopGPS/>
                 </child2>
               </container1>
               <container2>
@@ -139,8 +140,12 @@
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Vegetation_Notes" type="string"/>
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Ground_Surface_Notes" type="string"/>
       <bind nodeset="/faims/POI/POI/Notes" type="string"/>
+      <bind nodeset="/faims/POI/POI/Notes" type="string"/>
       <bind nodeset="/faims/control/Search/container1/child2/Walker" type="decimal"/>
       <bind nodeset="/faims/control/Search/container2/child1/listOfLastText" type="decimal"/>
+      <bind nodeset="/faims/control/Control/container1/child1/refreshText" type="decimal"/>
+      <bind nodeset="/faims/control/Control/container2/child1/trackdistText" type="decimal"/>
+      <bind nodeset="/faims/control/Control/container3/child1/tracktimeText" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -283,6 +288,9 @@
             <trigger ref="refreshGPSButton">
               <label>Start GPS</label>
             </trigger>
+            <trigger ref="stopGPS">
+              <label>Stop GPS</label>
+            </trigger>
           </group>
         </group>
         <group faims_style="orientation" ref="container2">
@@ -318,7 +326,7 @@
         <trigger ref="trackOffButton">
           <label>Tracklog Off</label>
         </trigger>
-        <input faims_certainty="false" faims_read_only="true" ref="trackStatus">
+        <input faims_certainty="false" faims_read_only="true" ref="trackStatus" faims_style_class="track-status">
           <label>Track Log Status</label>
         </input>
         <trigger ref="SyncOn">
@@ -421,7 +429,7 @@
         <trigger ref="Finish_SUI" faims_style_class="faims-success">
           <label>Finish {Survey_Unit}</label>
         </trigger>
-        <input faims_certainty="false" faims_annotation="false" faims_read_only="true" ref="trackStatus">
+        <input faims_certainty="false" faims_annotation="false" faims_read_only="true" ref="trackStatus" faims_style_class="track-status">
           <label>Track Log Status</label>
         </input>
       </group>
