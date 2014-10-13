@@ -44,7 +44,7 @@ addActionBarItem("internal_gps", new ToggleActionButtonCallback() {
             stopGPS();
         }
         startInternalGPS();
-        showToast("GPS refresh rate set to " + getFieldValue("control/Control/refreshText") + ". You can change it in the Control tab");
+        showToast("GPS enabled. GPS refresh rate set to " + getFieldValue("control/Control/refreshText") + ". You can change it in the Control tab.");
     }
 });
 
@@ -68,7 +68,7 @@ addActionBarItem("external_gps", new ToggleActionButtonCallback() {
         }
         startExternalGPS();
         if(isBluetoothConnected()) {
-            showToast("GPS refresh rate set to " + getFieldValue("control/Control/refreshText") + ". You can change it in the Control tab");
+            showToast("GPS enabled. GPS refresh rate set to " + getFieldValue("control/Control/refreshText") + ". You can change it in the Control tab.");
         } else {
             showToast("Please enable bluetooth.");
             this.isActionOff();
@@ -94,7 +94,7 @@ addActionBarItem("time_tracklog", new ToggleActionButtonCallback() {
     actionOff() {
         if(isInternalGPSOn() || isInternalGPSOn()) {
             startTimeTrack();
-            showToast("Tracklog time interval set to " + getFieldValue("control/Control/tracktimeText") + " seconds. You can change it in the Control tab");    
+            showToast("Tracklog enabled. Tracklog time interval set to " + getFieldValue("control/Control/tracktimeText") + " seconds. You can change it in the Control tab.");    
         } else {
             showToast("GPS is not turned on.");
             this.isActionOff();
@@ -120,7 +120,7 @@ addActionBarItem("distance_tracklog", new ToggleActionButtonCallback() {
     actionOff() {
         if(isInternalGPSOn() || isInternalGPSOn()) {
             startDistTrack();
-        showToast("Tracklog distance interval set to " + getFieldValue("control/Control/trackdistText") + " metres. You can change it in the Control tab");
+        showToast("Tracklog enabled. Tracklog distance interval set to " + getFieldValue("control/Control/trackdistText") + " metres. You can change it in the Control tab.");
         } else {
             showToast("GPS is not turned on.");
             this.isActionOff();
@@ -206,7 +206,7 @@ startGPS(){
         return;
     }
     setGPSUpdateInterval(Integer.parseInt(getFieldValue("control/Control/refreshText")));
-    showToast("GPS enabled.");
+    showToast("GPS enabled. GPS refresh rate set to " + getFieldValue("control/Control/refreshText") + ".");
     if(intext.equals("I")) { 
         if(isExternalGPSOn()) stopGPS();
         startInternalGPS();
@@ -246,16 +246,26 @@ stateAppend = "";
 
 startTimeTrack(){
     stopTrack();
-    tracklogState = "Time";
-    startTrackingGPS("time", Integer.parseInt(getFieldValue("control/Control/tracktimeText")), "saveGPSTrack()");
-    updateTrackStatus();
+    if(isInternalGPSOn() || isExternalGPSOn()) {
+        tracklogState = "Time";
+        showToast("Tracklog enabled. Tracklog time interval set to " + getFieldValue("control/Control/tracktimeText") + " seconds.");    
+        startTrackingGPS("time", Integer.parseInt(getFieldValue("control/Control/tracktimeText")), "saveGPSTrack()");
+        updateTrackStatus();
+    } else {
+        showToast("GPS is not turned on.");
+    }
 }
 
 startDistTrack(){
     stopTrack();
-    tracklogState = "Distance";
-    startTrackingGPS("distance", Integer.parseInt(getFieldValue("control/Control/trackdistText")), "saveGPSTrack()");
-    updateTrackStatus();
+    if(isInternalGPSOn() || isExternalGPSOn()) {
+        tracklogState = "Distance";
+        showToast("Tracklog enabled. Tracklog distance interval set to " + getFieldValue("control/Control/trackdistText") + " metres.");
+        startTrackingGPS("distance", Integer.parseInt(getFieldValue("control/Control/trackdistText")), "saveGPSTrack()");
+        updateTrackStatus();
+    } else {
+        showToast("GPS is not turned on.");
+    }
 }
 
 stopTrack(){
@@ -263,6 +273,7 @@ stopTrack(){
     numTracklogPoints = 0;
     numTransectPoints = 0;
     tracklogState = "Stopped";
+    showToast("Tracklog disabled.");
     updateTrackStatus();
 }
 
