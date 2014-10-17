@@ -763,7 +763,7 @@ DATA_ENTRY_LAYER = "Transect Layer";
 DATA_ENTRY_LAYER_ID = 0;
 
 onEvent("control/Map", "show", "drawTransects()");
-onEvent("control/Map/centre", "click", "centerOnCurrentPosition(\"control/Map/map\");"); 
+onEvent("control/Map/centre", "click", "centreOnMe();"); 
 
 drawTransects(){
      fetchOne("SELECT uuid, geospatialcolumn FROM latestNonDeletedArchEnt join aenttype using (aenttypeid) where aenttypename = 'Transect'", new FetchCallback() {
@@ -801,6 +801,14 @@ initMap() {
 }
 
 initMap();
+
+centreOnMe() {
+    if(!isExternalGPSOn() && !isInternalGPSOn()) {
+        showToast("GPS is not enabled.");
+    } else {
+        centerOnCurrentPosition("control/Map/map");
+    }
+}
 
 /*** USER ***/
 
