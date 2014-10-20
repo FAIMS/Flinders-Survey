@@ -50,7 +50,14 @@
             </Search>
             <Map>
               <map/>
-              <centre/>
+              <container1>
+                <child1>
+                  <centre/>
+                </child1>
+                <child2>
+                  <saveSettings/>
+                </child2>
+              </container1>
             </Map>
             <Control>
               <internalExternalGPS/>
@@ -256,10 +263,22 @@
          <input ref="map" faims_map="true" faims_certainty="false">
           <label/>
         </input>
+        <group faims_style="orientation" ref="container1">
+          <label/>
+          <group faims_style="even" ref="child1">
+            <label/>
+            <trigger ref="centre">
+              <label>Centre on Me</label>
+            </trigger>
+          </group>
+          <group faims_style="even" ref="child2">
+            <label/>
+            <trigger ref="saveSettings">
+              <label>Save Map Settings</label>
+            </trigger>
+          </group>
+        </group>
         
-        <trigger ref="centre">
-          <label>Centre on Me</label>
-        </trigger>
       </group>
 
       <group ref="Control">
