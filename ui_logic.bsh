@@ -827,7 +827,14 @@ saveMapSettings() {
 populateListForUsers() {
     fetchAll("select userid, fname ||' ' || lname from user", new FetchCallback() {
         onFetch(result) {
-            populateDropDown("user/usertab/users", result);        
+            populateDropDown("user/usertab/users", result);
+            fetchOne("select value from localSettings where key = 'User';", new FetchCallback() {
+                onFetch(result) {
+                    if (!isNull(result)){
+                        setFieldValue("user/usertab/users", result.get(0));
+                    }
+                }
+            });
         }
     });
     makeVocab("RadioGroup", "user/usertab/Team", "Device ID");
@@ -836,13 +843,6 @@ populateListForUsers() {
         onFetch(result) {
             if (!isNull(result)){
                 setFieldValue("user/usertab/Team", result.get(0));
-            }
-        }
-    });
-    fetchOne("select value from localSettings where key = 'User';", new FetchCallback() {
-        onFetch(result) {
-            if (!isNull(result)){
-                setFieldValue("user/usertab/users", result.get(0));
             }
         }
     });
