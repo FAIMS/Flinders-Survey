@@ -43,7 +43,7 @@
                   <listOfLastText/>
                 </child1>
                 <child2>
-                  <archentsRadio/>
+                  <archentsList/>
                 </child2>
               </container2>
               <listOfLast/>
@@ -110,8 +110,6 @@
               <Ground_Surface_Notes/>
               <Photos/>
               <Attach_Photo/>
-              <Update/>
-              <Delete/>
               <New_POI/>
               <Finish_SUI/>
               <trackStatus/>
@@ -135,8 +133,6 @@
                   <Recorded_By/>
                 </child2>
               </container1>
-              <Update/>
-              <Delete/>
             </POI>
           </POI>
         </faims>
@@ -236,7 +232,7 @@
           </group>
           <group faims_style="even" ref="child2">
             <label/>
-            <select1 ref="archentsRadio" faims_annotation="false" faims_certainty="false">
+            <select1 ref="archentsList" faims_annotation="false" faims_certainty="false">
               <label/>
               <item>
                 <label>{Survey_Unit}</label>
@@ -426,7 +422,7 @@
         <input ref="Ground_Surface_Notes" faims_attribute_name="Ground surface notes" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Ground_Surface_Notes}</label>
         </input>
-        <select type="camera" faims_sync="true" ref="Photos" faims_attribute_name="Photo" faims_attribute_type="measure" faims_certainty="false" faims_annotation="true" faims_read_only="false">
+        <select type="camera" faims_sync="true" ref="Photos" faims_attribute_name="Photo" faims_attribute_type="measure" faims_certainty="true" faims_annotation="true" faims_read_only="false">
           <label>{Photos}</label>
           <item>
             <label>placeholder</label>
@@ -436,14 +432,8 @@
         <trigger ref="Attach_Photo" faims_style_class="faims-success">
           <label>{Attach_Photo}</label>
         </trigger>
-        <!-- <trigger ref="Update">
-          <label>Save {Survey_Unit}</label>
-        </trigger>
-        <trigger ref="Delete">
-          <label>Delete {Survey_Unit}</label>
-        </trigger> -->
         <trigger ref="New_POI" faims_style_class="faims-blue">
-          <label>Save and New {POI}</label>
+          <label>New {POI}</label>
         </trigger>
         <trigger ref="Finish_SUI" faims_style_class="faims-success">
           <label>Finish {Survey_Unit}</label>
@@ -505,12 +495,6 @@
             </input>
           </group>
         </group>
-        <!-- <trigger ref="Update">
-          <label>Save {POI}</label>
-        </trigger>
-        <trigger ref="Delete">
-          <label>Delete {POI}</label>
-        </trigger> -->
       </group>
     </group>
   </h:body>
