@@ -31,6 +31,18 @@
     <property name="Photo" type="file" file="true" thumbnail="true">
       <description>Description TBD</description>
     </property>
+    <property name="Latitude" type="float">
+      <description>Description TBD</description>
+    </property>
+    <property name="Longitude" type="float">
+      <description>Description TBD</description>
+    </property>
+    <property name="Northing" type="float">
+      <description>Description TBD</description>
+    </property>
+    <property name="Easting" type="float">
+      <description>Description TBD</description>
+    </property>
   </ArchaeologicalElement>
 
 
@@ -42,11 +54,16 @@
    <property name="TracklogTeam" type="string" isIdentifier="true">
       <description>Description TBD</description>
     </property>
-
     <property name="Latitude" type="float">
       <description>Description TBD</description>
     </property>
     <property name="Longitude" type="float">
+      <description>Description TBD</description>
+    </property>
+    <property name="Northing" type="float">
+      <description>Description TBD</description>
+    </property>
+    <property name="Easting" type="float">
       <description>Description TBD</description>
     </property>
     <property name="Heading" type="float">
@@ -77,6 +94,12 @@
       <description>Description TBD</description>
     </property>
     <property name="Longitude" type="float">
+      <description>Description TBD</description>
+    </property>
+    <property name="Northing" type="float">
+      <description>Description TBD</description>
+    </property>
+    <property name="Easting" type="float">
       <description>Description TBD</description>
     </property>
     <property name="Heading" type="float">

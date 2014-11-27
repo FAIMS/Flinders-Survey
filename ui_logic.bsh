@@ -1,4 +1,5 @@
 import java.util.concurrent.Callable;
+import com.nutiteq.utils.WkbRead;
 /*** 'Editable' - you can edit the code below based on the needs ***/
 User user; // don't touch
 String userid;
@@ -317,21 +318,22 @@ saveGPSTrack() {
                 tracklogState = "Bad GPS Fix";
                 return;
             }
+            positionProj = getGPSPositionProjected();
             numTracklogPoints++;
             
             List attributes = createAttributeList();
             
             attributes.add(createEntityAttribute("Longitude", null, null, "" + position.getLongitude(), null));
             attributes.add(createEntityAttribute("Latitude", null, null, "" + position.getLatitude(), null ));
+            attributes.add(createEntityAttribute("Easting", null, null, "" + positionProj.getLongitude(), null));
+            attributes.add(createEntityAttribute("Northing", null, null, "" + positionProj.getLatitude(), null ));
             attributes.add(createEntityAttribute("Heading", null, null, "" + getGPSHeading(), null));
             attributes.add(createEntityAttribute("Accuracy", null, null, "" + getGPSEstimatedAccuracy(), null));
             String date = new java.text.SimpleDateFormat("d-MMM-yy HH:MM:ss z").format(new Date());
             attributes.add(createEntityAttribute("Timestamp", null, null, "" + date, null));
             attributes.add(createEntityAttribute("TracklogTeam", teamQuery.get(0), null, null, null));
 
-            
-            positionProj = getGPSPositionProjected();
-            Point p = new Point(new MapPos(positionProj.getLongitude(), positionProj.getLatitude()), null, (PointStyle) null, null);
+            Point p = new Point(new MapPos(positionProj.getLongitude(), positionProj.getLatitude()), null, null, null);
             ArrayList l = new ArrayList();
             l.add(p);
             
@@ -348,15 +350,19 @@ saveGPSTrack() {
                             }
                             stateAppend = "";
                         }
-
-                        p = new Point(new MapPos(positionProj.getLongitude(), positionProj.getLatitude()), null, (PointStyle) null, null);
-                        l = new ArrayList();
-                        l.add(p);
                         
                         saveArchEnt(null, "Transect", l, attributes, new SaveCallback() {
                             onSave(uuid, newRecord) {
                                 transect_id = uuid;
-                                saveEntitiesToRel("TransectSUI", transect_id, survey_unit_id);
+                                if(transectEnabled) {
+                                    saveEntitiesToRel("TransectSUI", transect_id, survey_unit_id);    
+                                } else {
+                                    saveEntitiesToRel("TransectSUI", transect_id, survey_unit_id, new Callable() {
+                                        call() {
+                                            drawSurveyUnit();
+                                        }
+                                    });  
+                                }
                                 updateTrackStatus();
                             }
                         });
@@ -366,6 +372,41 @@ saveGPSTrack() {
         }
     });
 }
+
+drawSurveyUnit() {
+    fetchOne("update archentity set geospatialcolumn = (select casttogeometrycollection(geom) " +
+            "from ( " +
+            "select makeline(transform(geospatialcolumn, 4326)) as geom " +
+              "from (select * from latestnondeletedarchent join aenttype using (aenttypeid) join latestnondeletedaentreln using (uuid) where aenttypename = 'Transect' order by uuid) Transect  " +
+              "join (select uuid, relationshipid from latestnondeletedarchent join aenttype using (aenttypeid) join latestnondeletedaentreln using (uuid)  where aenttypename = 'Survey Unit' ) survey_unit using (relationshipid)  " +
+              "join (select uuid, measure from latestnondeletedaentvalue join attributekey using (attributeid) where attributename = 'Total Transect Width (m)' )   " +
+             "where survey_unit.uuid = " + survey_unit_id + "  " +
+             "group by survey_unit.uuid) " +
+             ") where uuid = " + survey_unit_id + " and aenttimestamp = (select aenttimestamp from latestnondeletedarchent where uuid = " + survey_unit_id + ");", null);
+
+
+}
+
+// TODO: Draw polygon as opposed to a line
+//     fetchOne("select st_expand(makeline(transform(geospatialcolumn, 3785)), coalesce(casttointeger(measure),0)) " +
+//              "from (select * from latestnondeletedarchent join aenttype using (aenttypeid) join latestnondeletedaentreln using (uuid) where aenttypename = 'Transect' order by uuid) Transect  " +
+//              "join (select uuid, relationshipid from latestnondeletedarchent join aenttype using (aenttypeid) join latestnondeletedaentreln using (uuid)  where aenttypename = 'Survey Unit' ) survey_unit using (relationshipid)  " +
+//              "join (select uuid, measure from latestnondeletedaentvalue join attributekey using (attributeid) where attributename = 'Total Transect Width (m)' )   " +
+//              "where survey_unit.uuid = " + survey_unit_id + "  " +
+//              "group by survey_unit.uuid;", new FetchCallback() {
+//                 onFetch(result) {
+//                     print(result);
+//                     // Object obj = WkbRead.readWkb(new ByteArrayInputStream(result.get(0).getBytes()), null);
+//                     print(WkbRead.readWkb(new ByteArrayInputStream(result.get(0).getBytes()), (Object) null));
+//                     print(WkbRead.readWkb(new ByteArrayInputStream(result.get(0).getBytes()), (Object) null).getClass());
+//                     // List gl = Arrays.asList();
+//                     // Polygon geom = new Polygon(result.get(0));
+//                     // List gl;
+//                     // gl.add(geom);
+//                     saveArchEnt(survey_unit_id, "Survey Unit", WkbRead.readWkb(new ByteArrayInputStream(result.get(0).getBytes()), (Object) null), null, null);
+//                 }
+//             });
+// }
 
 //Survey Unit Logic
 onEvent("Survey_Unit", "show", "autoSaveSurveyUnit();addSurveyUnitNavigation();");
@@ -502,7 +543,12 @@ addSurveyUnitNavigation() {
                 onFetch(result) {
                     survey_unit_id = null;
                     populateCameraPictureGallery("Survey_Unit/Survey_Unit/Photos", new ArrayList());
-                    autoNumSurveyUnit();
+                    fetchOne("select datetime('now', 'localtime');", new FetchCallback() {
+                        onFetch(result) {
+                            setFieldValue("Survey_Unit/Survey_Unit/Timestamp", result.get(0));
+                            autoNumSurveyUnit();
+                        }
+                    });
                 }
             });
             
@@ -582,6 +628,9 @@ autoNumSurveyUnit() {
 //Point of Interest Logic
 onEvent("POI", "show", "addPOINavigation();");
 onEvent("POI/POI/Attach_Photo", "click", "attachPictureTo(\"POI/POI/Photos\")");
+onEvent("POI/POI/takeGPS", "click", "fillInGPS(\"POI/POI/\");savePOIPoint();");
+onFocus("POI/POI/Northing", "", "savePOIPoint();");
+onFocus("POI/POI/Easting", "", "savePOIPoint();");
 
 String poi_id = null;
 
@@ -593,7 +642,7 @@ newPOI() {
         onFetch(result) {
             setFieldValue("POI/POI/Timestamp", result.get(0));
         }
-    });    
+    });
     autoNumPOI();
 }
 
@@ -656,6 +705,23 @@ savePOI(Callable callback) {
     });
 }
 
+savePOIPoint() {
+    if(isNull(getFieldValue("POI/POI/Northing")) || isNull(getFieldValue("POI/POI/Easting"))) return;
+    Double northing = Double.parseDouble(getFieldValue("POI/POI/Northing"));
+    Double easting = Double.parseDouble(getFieldValue("POI/POI/Easting"));
+
+    fetchOne("select transform(makePoint("+easting+","+northing+","+getModuleSrid()+"), 3785);", new FetchCallback() {
+        onFetch(result) {
+            if(!isNull(result)) {
+                Point p = new Point(new MapPos(easting, northing), null, null, null);
+                ArrayList l = new ArrayList();
+                l.add(p);
+                saveArchEnt(poi_id, "POI", l, null, null);
+            }
+        }
+    });
+}
+
 deletePOI() {
     if (!isNull(poi_id)) {
         showAlert("Confirm Deletion", "Press OK to Delete this Point of Interest!", "reallyDeletePOI()", "doNotDelete()");
@@ -687,7 +753,12 @@ addPOINavigation() {
                 onFetch(result) {
                     poi_id = null;
                     populateCameraPictureGallery("POI/POI/Photos", new ArrayList());
-                    autoNumPOI();
+                    fetchOne("select datetime('now', 'localtime');", new FetchCallback() {
+                        onFetch(result) {
+                            setFieldValue("POI/POI/Timestamp", result.get(0));
+                            autoNumPOI();
+                        }
+                    });
                 }
             });
         }
@@ -767,6 +838,17 @@ saveEntitiesToRel(String type, String entity1, String entity2) {
     });
 }
 
+saveEntitiesToRel(String type, String entity1, String entity2, Callable callback) {
+    if (isNull(entity1) || isNull(entity2)) return;
+    saveRel(null, type, null, null, new SaveCallback() {
+        onSave(rel_id, newRecord) {
+            addReln(entity1, rel_id, null);
+            addReln(entity2, rel_id, null);
+            if(callback != null) callback.call();
+        }
+    });
+}
+
 makeVocab(String type, String path, String attrib) {
     fetchAll("select vocabid, vocabname from vocabulary join attributekey using (attributeid) where attributename = '"+attrib+"' order by vocabcountorder",
         new FetchCallback() {
@@ -784,6 +866,23 @@ makeVocab(String type, String path, String attrib) {
         });
 }
 
+fillInGPS(String path) {
+    Object position = getGPSPosition(); 
+    Object projPosition = getGPSPositionProjected();
+    if (projPosition != null ) {
+        Double latitude = position.getLatitude();
+        Double longitude = position.getLongitude();
+        Double northing = projPosition.getLatitude();
+        Double easting = projPosition.getLongitude();
+        setFieldValue(path+"Latitude", latitude);
+        setFieldValue(path+"Longitude", longitude);
+        setFieldValue(path+"Northing", northing);
+        setFieldValue(path+"Easting", easting);
+    } else {
+        showToast("GPS Not initialized");
+    }
+}
+
 doNotDelete() {
     showToast("Delete Cancelled.");
 }
@@ -791,7 +890,7 @@ doNotDelete() {
 
 /*** 'Uneditable' - you can edit the code below with extreme precaution ***/
 
-DATA_ENTRY_LAYER = "Transect Layer";
+DATA_ENTRY_LAYER = "Canvas Layer";
 DATA_ENTRY_LAYER_ID = 0;
 
 onEvent("control/Map", "show", "drawTransects();loadMapSettings();");
@@ -812,7 +911,7 @@ initMap() {
 
     DATA_ENTRY_LAYER_ID = createCanvasLayer("control/Map/map", DATA_ENTRY_LAYER);
 
-    showBaseMap("control/Map/map", "Base Layer", "files/data/maps/RasterData.tif");
+    showBaseMap("control/Map/map", "Base Layer", "files/data/maps/Cairns.tif");
 
     isEntity = true;
     queryName = "Transects";
@@ -830,7 +929,13 @@ initMap() {
     pos = createPolygonStyle(10, Color.parseColor("#440000FF"), createLineStyle(10, Color.parseColor("#AA000000"), 0.01f, 0.3f, null));
     ts = createTextStyle(10, Color.RED, 30, Typeface.SANS_SERIF);
 
-    showDatabaseLayer("control/Map/map", "Saved Data Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
+    showDatabaseLayer("control/Map/map", "Transect Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
+
+    queryName = "Survey Unit";
+    querySQL = "SELECT uuid, aenttimestamp FROM latestNonDeletedArchEnt join aenttype using (aenttypeid) where aenttypename = 'Survey Unit'";
+        
+    addDatabaseLayerQuery("control/Map/map", queryName, querySQL);
+    showDatabaseLayer("control/Map/map", "Survey Unit Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
 }
 
 initMap();

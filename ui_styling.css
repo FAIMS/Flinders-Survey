@@ -74,6 +74,17 @@
     
 }
 
+.faims-blue-half {
+    background-color: #33b5e5;
+    border-color: #26a0cd;
+    color: white;
+    margin-top:2%;
+    margin-bottom:20%;
+    border-    border-radius:5%;
+    font-size: 12px;
+    
+}
+
 .faims-danger {
     background-color: #d9534f;
     border-color: #be3e3a;

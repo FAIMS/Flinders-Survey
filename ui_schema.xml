@@ -121,18 +121,35 @@
           <POI>
             <POI>
               <POI_ID/>
+              <container1>
+                <child1>
+                  <Latitude/>
+                </child1>
+                <child2>
+                  <Longitude/>
+                </child2>
+              </container1>
+              <container2>
+                <child1>
+                  <Northing/>
+                </child1>
+                <child2>
+                  <Easting/>
+                </child2>
+              </container2>
+              <takeGPS/>
               <Feature_Type/>
               <Notes/>
               <Photos/>
               <Attach_Photo/>
-              <container1>
+              <container3>
                 <child1>
                   <Timestamp/>
                 </child1>
                 <child2>
                   <Recorded_By/>
                 </child2>
-              </container1>
+              </container3>
             </POI>
           </POI>
         </faims>
@@ -144,6 +161,10 @@
       <bind nodeset="/faims/Survey_Unit/Survey_Unit/Ground_Surface_Notes" type="string"/>
       <bind nodeset="/faims/POI/POI/Notes" type="string"/>
       <bind nodeset="/faims/POI/POI/Notes" type="string"/>
+      <bind nodeset="/faims/POI/POI/container1/child1/Latitude" type="decimal"/>
+      <bind nodeset="/faims/POI/POI/container1/child2/Longitude" type="decimal"/>
+      <bind nodeset="/faims/POI/POI/container2/child1/Northing" type="decimal"/>
+      <bind nodeset="/faims/POI/POI/container2/child2/Easting" type="decimal"/>
       <bind nodeset="/faims/control/Search/container1/child2/Walker" type="decimal"/>
       <bind nodeset="/faims/control/Search/container2/child1/listOfLastText" type="decimal"/>
       <bind nodeset="/faims/control/Control/container1/child1/refreshText" type="decimal"/>
@@ -263,13 +284,13 @@
           <label/>
           <group faims_style="even" ref="child1">
             <label/>
-            <trigger ref="centre">
+            <trigger ref="centre" faims_style_class="faims-blue-half">
               <label>Centre on Me</label>
             </trigger>
           </group>
           <group faims_style="even" ref="child2">
             <label/>
-            <trigger ref="saveSettings">
+            <trigger ref="saveSettings" faims_style_class="faims-blue-half">
               <label>Save Map Settings</label>
             </trigger>
           </group>
@@ -460,6 +481,39 @@
         <input ref="POI_ID" faims_attribute_name="POI ID" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="false" faims_style_class="required">
           <label>{POI_ID}</label>
         </input>
+        <group faims_style="orientation" ref="container1">
+          <label/>
+          <group faims_style="even" ref="child1">
+            <label/>
+            <input ref="Latitude" faims_attribute_name="Easting" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="true">
+              <label>{Latitude}</label>
+            </input>
+          </group>
+          <group faims_style="even" ref="child2">
+            <label/>
+            <input ref="Longitude" faims_attribute_name="Easting" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="true">
+              <label>{Longitude}</label>
+            </input>
+          </group>
+        </group>
+        <group faims_style="orientation" ref="container2">
+          <label/>
+          <group faims_style="even" ref="child1">
+            <label/>
+            <input ref="Northing" faims_attribute_name="Easting" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group faims_style="even" ref="child2">
+            <label/>
+            <input ref="Easting" faims_attribute_name="Easting" faims_attribute_type="measure" faims_certainty="false" faims_annotation="false" faims_read_only="false">
+              <label>{Easting}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="takeGPS">
+          <label>{TakeGPS}</label>
+        </trigger>
         <select1 ref="Feature_Type" faims_attribute_name="Feature Type" faims_attribute_type="vocab" faims_certainty="true" faims_annotation="true">
           <label>{Feature_Type}</label>
           <item>
@@ -480,7 +534,7 @@
         <trigger ref="Attach_Photo" faims_style_class="faims-success">
           <label>{Attach_Photo}</label>
         </trigger>
-        <group faims_style="orientation" ref="container1">
+        <group faims_style="orientation" ref="container3">
           <label/>
           <group faims_style="even" ref="child1">
             <label/>
