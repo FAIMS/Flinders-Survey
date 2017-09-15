@@ -2,7 +2,7 @@
 This module was created for the **Flinders University Archaeology Program**, based at Flinders in Australia. The module has been designed for transect field survey training aiming to record archaeological features in Australia.
 
 ## Authorship:
-This module was co-developed by Heather Burke at Flinders University and Adela Sobotkova at the FAIMS Project, Department of Ancient History, Macquarie University.
+This module was co-developed by Heather Burke and Mick Morrison at Flinders University and Adela Sobotkova at the FAIMS Project, Department of Ancient History, Macquarie University.
 
 ## Funding:
 Development of this module was funded by the ARC grant LE140100151, FAIMS: Transforming archaeological research through digital technologies.
@@ -33,7 +33,7 @@ This module is part of the **FAIMS Demo library** on our publicly accessible Dem
 * tracklog with point of interest recording
 
 ## Contact info:
-For more details about the **Flinders University Archaeology Program** please visit http://www.flinders.edu.au/ehl/archaeology/. If you have any questions about the use of the module, contact heather.burke@flinders.edu.au.
+For more details about the **Flinders University Archaeology Program** please visit http://www.flinders.edu.au/ehl/archaeology/. If you have any questions about the use of the module, contact heather.burke@flinders.edu.au or mick.morrison@flinders.edu.au.
 
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 
