@@ -38,3 +38,22 @@ For more details about the **Flinders University Archaeology Program** please vi
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 
 ## Screenshots:
+
+<p align="left">
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-215950.png" width="250"/>
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220031.png" width="250"/>
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220341.png" width="250"/>
+</p>
+
+<p align="left">
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220424.png" width="250"/>
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220502.png" width="250"/>
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220840.png" width="250"/>
+</p>
+
+<p align="left">
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220856.png" width="250"/>
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220916.png" width="250"/>
+  <img src="https://github.com/FAIMS/Flinders-Survey/blob/master/screenshots/Screenshot_20170913-220938.png" width="250"/>
+</p>
+
