@@ -33,7 +33,7 @@ This module is part of the **FAIMS Demo library** on our publicly accessible Dem
 * recording of tracklog with points of interest
 
 ## Contact info:
-For more details about the **Flinders University Archaeology Program** please visit http://www.flinders.edu.au/ehl/archaeology/. If you have any questions about the use of the module, mick.morrison@flinders.edu.au.
+For more details about the **Flinders University Archaeology Program** please visit http://www.flinders.edu.au/ehl/archaeology/. If you have any questions about the use of the module, please contact mick.morrison@flinders.edu.au.
 
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 
